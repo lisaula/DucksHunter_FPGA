@@ -1,0 +1,17 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Sep 20 11:30:45 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "blue_out<0>" LOCATE = SITE "L8" LEVEL 1;
+COMP "blue_out<1>" LOCATE = SITE "N9" LEVEL 1;
+COMP "green_out<0>" LOCATE = SITE "P5" LEVEL 1;
+COMP "green_out<1>" LOCATE = SITE "N6" LEVEL 1;
+COMP "hsync" LOCATE = SITE "N8" LEVEL 1;
+COMP "reset" LOCATE = SITE "C13" LEVEL 1;
+COMP "vsync" LOCATE = SITE "M6" LEVEL 1;
+COMP "clk50mhz" LOCATE = SITE "B8" LEVEL 1;
+COMP "red_out<0>" LOCATE = SITE "P8" LEVEL 1;
+COMP "red_out<1>" LOCATE = SITE "M8" LEVEL 1;
+SCHEMATIC END;
+

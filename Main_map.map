@@ -1,0 +1,115 @@
+Release 14.7 Map P.20131013 (nt)
+Xilinx Map Application Log File for Design 'Main'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s500e-ft256-5 -cm area -ir off -pr off
+-c 100 -o Main_map.ncd Main.ngd Main.pcf 
+Target Device  : xc3s500e
+Target Package : ft256
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Tue Sep 20 11:30:42 2016
+
+Mapping design into LUTs...
+Running directed packing...
+WARNING:Pack:266 - The function generator address<4>_mmx_out1021 failed to merge
+   with F5 multiplexer rom/Mrom_data2961_20_f5_12.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data5941_2225 failed to merge
+   with F5 multiplexer rom/Mrom_data5941_21_f5_13.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data8271_2628 failed to merge
+   with F5 multiplexer rom/Mrom_data10961_25_f5_10.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data2961_283 failed to merge
+   with F5 multiplexer rom/Mrom_data2961_26_f5_1.  There is a conflict for the
+   GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data1611_222 failed to merge
+   with F5 multiplexer rom/Mrom_data13251_20_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator address<4>3421 failed to merge with F5
+   multiplexer rom/Mrom_data1611_26_f5_3.  There is a conflict for the FXMUX. 
+   The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data8271_26 failed to merge
+   with F5 multiplexer rom/Mrom_data13251_25_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data8271_28 failed to merge
+   with F5 multiplexer rom/Mrom_data13251_27_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data5941_29 failed to merge
+   with F5 multiplexer rom/Mrom_data10961_21_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data5941_243 failed to merge
+   with F5 multiplexer rom/Mrom_data10961_23_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data8271_2425 failed to merge
+   with F5 multiplexer rom/Mrom_data13251_22_f5_3.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data8271_267 failed to merge
+   with F5 multiplexer rom/Mrom_data13251_24_f5_3.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data10961_289 failed to merge
+   with F5 multiplexer rom/Mrom_data13251_29_f5_5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data8271_2526 failed to merge
+   with F5 multiplexer rom/Mrom_data10961_24_f5_9.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator rom/Mrom_data8271_2627 failed to merge
+   with F5 multiplexer rom/Mrom_data10961_25_f5_9.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   15
+Logic Utilization:
+  Number of Slice Flip Flops:            55 out of   9,312    1%
+  Number of 4 input LUTs:             3,293 out of   9,312   35%
+Logic Distribution:
+  Number of occupied Slices:          1,906 out of   4,656   40%
+    Number of Slices containing only related logic:   1,906 out of   1,906 100%
+    Number of Slices containing unrelated logic:          0 out of   1,906   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       3,326 out of   9,312   35%
+    Number used as logic:             3,293
+    Number used as a route-thru:         33
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 10 out of     190    5%
+  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of DCMs:                         1 out of       4   25%
+
+Average Fanout of Non-Clock Nets:                4.92
+
+Peak Memory Usage:  218 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   3 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "Main_map.mrp" for details.

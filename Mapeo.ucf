@@ -1,0 +1,10 @@
+NET "clk50mhz" LOC="B8"; 
+Net "red_out[1]" LOC ="M8"  | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+Net "red_out[0]" LOC ="P8"  | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+Net "green_out[1]" LOC ="N6"  | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+Net "green_out[0]" LOC ="P5" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+Net "blue_out[1]" LOC ="N9"  | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+Net "blue_out[0]" LOC ="L8"  | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+Net "hsync" LOC ="N8"  | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+Net "vsync" LOC ="M6" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+Net "reset" LOC="C13" | IOSTANDARD = LVCMOS33;
