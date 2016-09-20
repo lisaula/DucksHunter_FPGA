@@ -44,7 +44,7 @@ Setup/Hold to clock clk50mhz
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-reset       |    5.211(R)|    0.357(R)|vga_clk           |   0.000|
+reset       |    4.593(R)|   -0.433(R)|vga_clk           |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk50mhz to Pad
@@ -52,14 +52,14 @@ Clock clk50mhz to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-blue_out<0> |    8.167(R)|vga_clk           |   0.000|
-blue_out<1> |    7.636(R)|vga_clk           |   0.000|
-green_out<0>|    8.713(R)|vga_clk           |   0.000|
-green_out<1>|    8.628(R)|vga_clk           |   0.000|
-hsync       |    7.807(R)|vga_clk           |   0.000|
-red_out<0>  |    7.869(R)|vga_clk           |   0.000|
-red_out<1>  |    7.897(R)|vga_clk           |   0.000|
-vsync       |    8.135(R)|vga_clk           |   0.000|
+blue_out<0> |    8.317(R)|vga_clk           |   0.000|
+blue_out<1> |    7.609(R)|vga_clk           |   0.000|
+green_out<0>|    8.112(R)|vga_clk           |   0.000|
+green_out<1>|    8.610(R)|vga_clk           |   0.000|
+hsync       |    7.586(R)|vga_clk           |   0.000|
+red_out<0>  |    7.564(R)|vga_clk           |   0.000|
+red_out<1>  |    7.893(R)|vga_clk           |   0.000|
+vsync       |    8.162(R)|vga_clk           |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk50mhz
@@ -67,11 +67,11 @@ Clock to Setup on destination clock clk50mhz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk50mhz       |   12.736|         |         |         |
+clk50mhz       |   12.612|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Sep 20 11:46:26 2016 
+Analysis completed Tue Sep 20 13:24:58 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

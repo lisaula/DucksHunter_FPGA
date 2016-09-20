@@ -2,6 +2,7 @@
 	module VGA_LOGIC(
 	input clk,
    input [5:0]rgb_in,
+	input draw,
 	output reg [1:0]red_out,
    output reg [1:0]green_out,
    output reg [1:0]blue_out,
@@ -75,15 +76,8 @@
 		end
 		
 		//setting image CarBlue
-		if(hcount <124 && vcount< 162)
+		if(draw)
 		begin
-		
-			/*color[5]=rgb_in[0];
-			color[4]=1'b0;
-			color[3]=rgb_in[1];
-			color[2]=1'b0;
-			color[1]=rgb_in[2];
-			color[0]=1'b0;*/
 			color = rgb_in;
 		end
 	end

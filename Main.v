@@ -13,18 +13,21 @@ module Main(
    wire vga_clk;
 	wire [9:0]hcount;
 	wire [9:0]vcount;
-	reg [14:0] address;
+	//reg [14:0] address;
 	wire [5:0] data;
 // synthesis attribute CLKFX_DIVIDE of vga_clock_dcm is 4
 // synthesis attribute CLKFX_MULTIPLY of vga_clock_dcm is 2
 	DCM vga_clock_dcm (.CLKIN(clk50mhz),.CLKFX(vga_clk));
 	
-	Ducks_Rom rom(address,data);
-	VGA_LOGIC vga(vga_clk,data,red_out,green_out,blue_out,hsync,vsync,hcount, vcount);
+	//Ducks_Rom rom(address,data);
+	
+	wire draw;
+	Ducks_Drawer DD(vga_clk, reset, hcount, vcount,data, draw);
+	VGA_LOGIC vga(vga_clk,data,draw,red_out,green_out,blue_out,hsync,vsync,hcount, vcount);
 	
 	always @(posedge vga_clk)
 	begin
-		if(reset)begin
+		/*if(reset)begin
 			address=0;
 		end
 		
@@ -38,6 +41,6 @@ module Main(
 		else 
 		begin
 			address=0;
-		end
+		end*/
 	end
 endmodule

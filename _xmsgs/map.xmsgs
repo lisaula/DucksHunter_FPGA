@@ -5,55 +5,70 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="MapLib" num="562" delta="new" >No environment variables are currently set.
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">address&lt;4&gt;_mmx_out1021</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data2961_20_f5_12</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data2961_214</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data10961_22_f5_0</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data5941_2225</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data5941_21_f5_13</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data8271_2526</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data10961_24_f5_9</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data8271_2628</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data10961_25_f5_10</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data8271_2627</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data10961_25_f5_9</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data2961_283</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data2961_26_f5_1</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data1611_222</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data13251_20_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data1611_222</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data13251_20_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data8271_28</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data13251_27_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">address&lt;4&gt;3421</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data1611_26_f5_3</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data5941_29</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data10961_21_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data8271_26</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data13251_25_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data5941_243</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data10961_23_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data8271_28</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data13251_27_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/address&lt;4&gt;_mmx_out1021</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data2961_20_f5_12</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data5941_29</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data10961_21_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data5941_2225</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data5941_21_f5_13</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data5941_243</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data10961_23_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data8271_2724</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data13251_25_f5_12</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data8271_2425</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data13251_22_f5_3</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data8271_2729</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data13251_26_f5_13</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data8271_267</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data13251_24_f5_3</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data2961_283</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data2961_26_f5_1</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data10961_289</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data13251_29_f5_5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data8271_2720</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data13251_30_f5_1</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data8271_2526</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data10961_24_f5_9</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data8271_2425</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data13251_22_f5_3</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">rom/Mrom_data8271_2627</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">rom/Mrom_data10961_25_f5_9</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data8271_295</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data13251_31_f5_0</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="info" file="PhysDesignRules" num="772" delta="new" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">vga_clock_dcm</arg>, consult the device Interactive Data Sheet.
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data1611_2419</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data13251_27_f5_0</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data8271_2911</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data13251_27_f5_4</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data8271_2817</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data13251_27_f5_6</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data10961_289</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data13251_29_f5_5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">DD/address&lt;4&gt;3421</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data1611_26_f5_3</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="info" file="PhysDesignRules" num="772" delta="old" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">vga_clock_dcm</arg>, consult the device Interactive Data Sheet.
 </msg>
 
 </messages>
