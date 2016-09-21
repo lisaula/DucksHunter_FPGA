@@ -29,6 +29,10 @@ module TB_main(
 		izq =1;
 		#60;
 		izq = 0;
+		#20;
+		fire = 1;
+		#20;
+		fire = 0;
 		
 		
 	end

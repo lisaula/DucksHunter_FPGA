@@ -14,7 +14,10 @@
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data2791_181</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data2391_15_f5_2</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data521_19</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data1951_17_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data521_18</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data1951_17_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data521_191</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data1951_19_f5</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data1951_135</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data1951_12_f5_3</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
@@ -23,7 +26,7 @@
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">DD/rom/Mrom_data521_196</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">DD/rom/Mrom_data1951_18_f5_2</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
-<msg type="info" file="PhysDesignRules" num="772" delta="old" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">vga_clock_dcm</arg>, consult the device Interactive Data Sheet.
+<msg type="info" file="PhysDesignRules" num="772" delta="new" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">vga_clock_dcm</arg>, consult the device Interactive Data Sheet.
 </msg>
 
 </messages>

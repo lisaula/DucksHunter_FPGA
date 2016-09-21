@@ -44,8 +44,13 @@ module Main(
 	
 	wire [5:0] shot_data; 
 	wire shot_drawer;
-	Shot_Drawer SD(vga_clk, reset, fire, hcount, vcount,pos_x, shot_data, shot_drawer);
+	//Shot_Drawer SD(vga_clk, reset, fire, hcount, vcount,pos_x, shot_data, shot_drawer);
 	
+	wire [9:0]position_y;
+	wire [9:0]position_x;
+	Shot_Builder SB(vga_clk, fire,reset, pos_x, position_y, position_x);
+	
+	Bullet_Drawer BD(vga_clk, reset, hcount, vcount, position_x, position_y, shot_data, shot_drawer);
 	wire draw;
 	wire [5:0]data;
 	Control_Drawer CD(vga_clk, duck_draw, gun_drawer,shot_drawer, duck_data, shot_data, data, draw);
