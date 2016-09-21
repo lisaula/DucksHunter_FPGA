@@ -9,7 +9,7 @@ module Ducks_Drawer(
     );
 	 
 	reg [14:0] address;
-	Ducks_Rom rom(address, data);
+	//Ducks_Rom rom(address, data);
 	always @(posedge clk)
 	begin
 		draw = 0;

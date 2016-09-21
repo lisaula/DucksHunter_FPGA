@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: Main.prj
 
@@ -104,9 +104,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "Ducks_Rom.v" in library work
 Compiling verilog file "VGA_LOGIC.v" in library work
-Module <Ducks_Rom> compiled
 Compiling verilog file "Gun.v" in library work
 Module <VGA_LOGIC> compiled
 Compiling verilog file "Ducks_Drawer.v" in library work
@@ -132,8 +130,6 @@ Analyzing hierarchy for module <Gun> in library <work>.
 Analyzing hierarchy for module <Control_Drawer> in library <work>.
 
 Analyzing hierarchy for module <VGA_LOGIC> in library <work>.
-
-Analyzing hierarchy for module <Ducks_Rom> in library <work>.
 
 WARNING:Xst:2591 - "Main.v" line 23: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 WARNING:Xst:2591 - "Main.v" line 23: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
@@ -163,12 +159,6 @@ Module <Main> is correct for synthesis.
 Analyzing module <Ducks_Drawer> in library <work>.
 Module <Ducks_Drawer> is correct for synthesis.
  
-Analyzing module <Ducks_Rom> in library <work>.
-INFO:Xst:2546 - "Ducks_Rom.v" line 13: reading initialization file "Psyduck.mif".
-WARNING:Xst:905 - "Ducks_Rom.v" line 10: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <rom_content>
-Module <Ducks_Rom> is correct for synthesis.
- 
 Analyzing module <Gun> in library <work>.
 Module <Gun> is correct for synthesis.
  
@@ -186,24 +176,48 @@ Module <VGA_LOGIC> is correct for synthesis.
 Performing bidirectional port resolution...
 INFO:Xst:2679 - Register <data> in unit <Gun> has a constant value of 000000 during circuit operation. The register is replaced by logic.
 
+Synthesizing Unit <Ducks_Drawer>.
+    Related source file is "Ducks_Drawer.v".
+WARNING:Xst:1305 - Output <data> is never assigned. Tied to value 000000.
+    Found 1-bit register for signal <draw>.
+    Found 15-bit up counter for signal <address>.
+    Found 10-bit comparator less for signal <address$cmp_lt0000> created at line 19.
+    Found 10-bit comparator greatequal for signal <draw$cmp_ge0000> created at line 17.
+    Found 10-bit comparator greatequal for signal <draw$cmp_ge0001> created at line 19.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <Ducks_Drawer> synthesized.
+
+
 Synthesizing Unit <Gun>.
     Related source file is "Gun.v".
 WARNING:Xst:647 - Input <fire> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <draw>.
-    Found 10-bit adder for signal <$add0000> created at line 21.
-    Found 10-bit adder for signal <$add0001> created at line 21.
-    Found 10-bit comparator greatequal for signal <draw$cmp_ge0000> created at line 19.
-    Found 11-bit comparator greater for signal <draw$cmp_gt0000> created at line 21.
-    Found 10-bit comparator lessequal for signal <draw$cmp_le0000> created at line 19.
-    Found 11-bit comparator less for signal <draw$cmp_lt0000> created at line 21.
-    Found 9-bit updown counter for signal <offset>.
-    Found 10-bit comparator greatequal for signal <offset$cmp_ge0000> created at line 33.
-    Found 32-bit comparator lessequal for signal <offset$cmp_le0000> created at line 29.
+    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 28.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 20.
+    Found 10-bit adder carry out for signal <add0002$addsub0000> created at line 20.
+    Found 20-bit up counter for signal <contador>.
+    Found 20-bit comparator greatequal for signal <contador$cmp_ge0000> created at line 35.
+    Found 10-bit comparator greatequal for signal <draw$cmp_ge0000> created at line 28.
+    Found 11-bit comparator greatequal for signal <draw$cmp_ge0001> created at line 20.
+    Found 10-bit comparator greater for signal <draw$cmp_gt0000> created at line 26.
+    Found 10-bit comparator greater for signal <draw$cmp_gt0001> created at line 19.
+    Found 11-bit comparator lessequal for signal <draw$cmp_le0000> created at line 28.
+    Found 10-bit comparator lessequal for signal <draw$cmp_le0001> created at line 19.
+    Found 11-bit comparator lessequal for signal <draw$cmp_le0002> created at line 20.
+    Found 10-bit comparator less for signal <draw$cmp_lt0000> created at line 26.
+    Found 10-bit updown counter for signal <offset>.
+    Found 10-bit comparator greatequal for signal <offset$cmp_ge0000> created at line 42.
+    Found 10-bit comparator lessequal for signal <offset$cmp_le0000> created at line 38.
+    Found 20-bit comparator less for signal <offset$cmp_lt0000> created at line 35.
+    Found 20-bit adder for signal <old_contador_1$add0000> created at line 34.
     Summary:
-	inferred   1 Counter(s).
+	inferred   2 Counter(s).
 	inferred   1 D-type flip-flop(s).
-	inferred   2 Adder/Subtractor(s).
-	inferred   6 Comparator(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
 Unit <Gun> synthesized.
 
 
@@ -230,8 +244,8 @@ WARNING:Xst:1780 - Signal <contColumn> is never used or assigned. This unconnect
     Found 10-bit register for signal <hcount>.
     Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 42.
     Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 42.
-    Found 10-bit adder for signal <old_hcount_2$addsub0000> created at line 33.
-    Found 10-bit adder for signal <old_vcount_1$addsub0000> created at line 30.
+    Found 10-bit adder for signal <old_hcount_3$addsub0000> created at line 33.
+    Found 10-bit adder for signal <old_vcount_2$addsub0000> created at line 30.
     Found 10-bit comparator less for signal <red_out$cmp_lt0000> created at line 48.
     Found 10-bit comparator less for signal <red_out$cmp_lt0001> created at line 48.
     Found 10-bit register for signal <vcount>.
@@ -244,29 +258,6 @@ WARNING:Xst:1780 - Signal <contColumn> is never used or assigned. This unconnect
 Unit <VGA_LOGIC> synthesized.
 
 
-Synthesizing Unit <Ducks_Rom>.
-    Related source file is "Ducks_Rom.v".
-WARNING:Xst:1781 - Signal <rom_content> is used but never assigned. Tied to default value.
-    Found 32768x6-bit ROM for signal <data>.
-    Summary:
-	inferred   1 ROM(s).
-Unit <Ducks_Rom> synthesized.
-
-
-Synthesizing Unit <Ducks_Drawer>.
-    Related source file is "Ducks_Drawer.v".
-    Found 1-bit register for signal <draw>.
-    Found 15-bit up counter for signal <address>.
-    Found 10-bit comparator less for signal <address$cmp_lt0000> created at line 19.
-    Found 10-bit comparator greatequal for signal <draw$cmp_ge0000> created at line 17.
-    Found 10-bit comparator greatequal for signal <draw$cmp_ge0001> created at line 19.
-    Summary:
-	inferred   1 Counter(s).
-	inferred   1 D-type flip-flop(s).
-	inferred   3 Comparator(s).
-Unit <Ducks_Drawer> synthesized.
-
-
 Synthesizing Unit <Main>.
     Related source file is "Main.v".
 WARNING:Xst:646 - Signal <gun_data> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -277,25 +268,27 @@ Unit <Main> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
- 32768x6-bit ROM                                       : 1
-# Adders/Subtractors                                   : 4
- 10-bit adder                                          : 4
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 2
+ 10-bit adder carry out                                : 3
+ 20-bit adder                                          : 1
 # Counters                                             : 2
- 15-bit up counter                                     : 1
- 9-bit updown counter                                  : 1
+ 10-bit updown counter                                 : 1
+ 20-bit up counter                                     : 1
 # Registers                                            : 12
  1-bit register                                        : 5
  10-bit register                                       : 2
  2-bit register                                        : 3
  6-bit register                                        : 2
-# Comparators                                          : 17
+# Comparators                                          : 22
  10-bit comparator greatequal                          : 6
+ 10-bit comparator greater                             : 2
  10-bit comparator less                                : 7
- 10-bit comparator lessequal                           : 1
- 11-bit comparator greater                             : 1
- 11-bit comparator less                                : 1
- 32-bit comparator lessequal                           : 1
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator lessequal                           : 2
+ 20-bit comparator greatequal                          : 1
+ 20-bit comparator less                                : 1
 
 =========================================================================
 
@@ -303,47 +296,60 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+INFO:Xst:2261 - The FF/Latch <data_0> in Unit <CD> is equivalent to the following 5 FFs/Latches, which will be removed : <data_1> <data_2> <data_3> <data_4> <data_5> 
+WARNING:Xst:1710 - FF/Latch <data_0> (without init value) has a constant value of 0 in block <CD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <color_4> has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <color_5> has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <red_out_0> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <red_out_1> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
- 32768x6-bit ROM                                       : 1
-# Adders/Subtractors                                   : 4
- 10-bit adder                                          : 4
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 2
+ 10-bit adder carry out                                : 3
+ 20-bit adder                                          : 1
 # Counters                                             : 2
- 15-bit up counter                                     : 1
- 9-bit updown counter                                  : 1
+ 10-bit updown counter                                 : 1
+ 20-bit up counter                                     : 1
 # Registers                                            : 43
  Flip-Flops                                            : 43
-# Comparators                                          : 17
+# Comparators                                          : 22
  10-bit comparator greatequal                          : 6
+ 10-bit comparator greater                             : 2
  10-bit comparator less                                : 7
- 10-bit comparator lessequal                           : 1
- 11-bit comparator greater                             : 1
- 11-bit comparator less                                : 1
- 32-bit comparator lessequal                           : 1
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator lessequal                           : 2
+ 20-bit comparator greatequal                          : 1
+ 20-bit comparator less                                : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2261 - The FF/Latch <data_0> in Unit <Control_Drawer> is equivalent to the following 5 FFs/Latches, which will be removed : <data_1> <data_2> <data_3> <data_4> <data_5> 
+WARNING:Xst:1710 - FF/Latch <data_0> (without init value) has a constant value of 0 in block <Control_Drawer>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:1901 - Instance vga_clock_dcm in unit Main of type DCM has been replaced by DCM_SP
 
 Optimizing unit <Main> ...
 
 Optimizing unit <Gun> ...
 
-Optimizing unit <Control_Drawer> ...
-
 Optimizing unit <VGA_LOGIC> ...
+WARNING:Xst:1293 - FF/Latch <vga/color_5> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <vga/color_4> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/red_out_1> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/red_out_0> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 41.
-FlipFlop DD/address_0 has been replicated 2 time(s)
+INFO:Xst:2261 - The FF/Latch <vga/color_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <vga/color_0> 
+INFO:Xst:2261 - The FF/Latch <vga/blue_out_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <vga/blue_out_0> 
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 2.
 
 Final Macro Processing ...
 
@@ -351,8 +357,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 69
- Flip-Flops                                            : 69
+# Registers                                            : 61
+ Flip-Flops                                            : 61
 
 =========================================================================
 
@@ -381,31 +387,27 @@ Design Statistics
 # IOs                              : 13
 
 Cell Usage :
-# BELS                             : 4791
+# BELS                             : 439
 #      GND                         : 1
-#      INV                         : 8
-#      LUT1                        : 39
-#      LUT2                        : 241
-#      LUT2_D                      : 32
-#      LUT2_L                      : 9
-#      LUT3                        : 947
-#      LUT3_D                      : 40
-#      LUT3_L                      : 32
-#      LUT4                        : 1764
-#      LUT4_D                      : 142
-#      LUT4_L                      : 128
-#      MUXCY                       : 71
-#      MUXF5                       : 948
-#      MUXF6                       : 267
-#      MUXF7                       : 63
-#      MUXF8                       : 4
+#      INV                         : 18
+#      LUT1                        : 68
+#      LUT2                        : 64
+#      LUT2_D                      : 1
+#      LUT2_L                      : 2
+#      LUT3                        : 12
+#      LUT3_D                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 42
+#      LUT4_D                      : 6
+#      LUT4_L                      : 5
+#      MUXCY                       : 134
 #      VCC                         : 1
-#      XORCY                       : 54
-# FlipFlops/Latches                : 69
-#      FD                          : 10
-#      FDE                         : 12
-#      FDR                         : 20
-#      FDRE                        : 26
+#      XORCY                       : 83
+# FlipFlops/Latches                : 61
+#      FD                          : 17
+#      FDE                         : 3
+#      FDR                         : 30
+#      FDRE                        : 10
 #      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFG                        : 1
@@ -422,9 +424,9 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                     1766  out of   4656    37%  
- Number of Slice Flip Flops:             69  out of   9312     0%  
- Number of 4 input LUTs:               3382  out of   9312    36%  
+ Number of Slices:                      115  out of   4656     2%  
+ Number of Slice Flip Flops:             61  out of   9312     0%  
+ Number of 4 input LUTs:                220  out of   9312     2%  
  Number of IOs:                          13
  Number of bonded IOBs:                  12  out of    190     6%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -451,7 +453,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk50mhz                           | vga_clock_dcm:CLKFX    | 69    |
+clk50mhz                           | vga_clock_dcm:CLKFX    | 61    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -462,9 +464,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.800ns (Maximum Frequency: 172.424MHz)
-   Minimum input arrival time before clock: 4.312ns
-   Maximum output required time after clock: 4.040ns
+   Minimum period: 4.285ns (Maximum Frequency: 233.375MHz)
+   Minimum input arrival time before clock: 5.908ns
+   Maximum output required time after clock: 4.063ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -473,96 +475,89 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50mhz'
-  Clock period: 5.800ns (frequency: 172.424MHz)
-  Total number of paths / destination ports: 22572 / 131
+  Clock period: 4.285ns (frequency: 233.375MHz)
+  Total number of paths / destination ports: 9261 / 101
 -------------------------------------------------------------------------
-Delay:               11.599ns (Levels of Logic = 12)
-  Source:            DD/address_3 (FF)
-  Destination:       CD/data_2 (FF)
+Delay:               8.570ns (Levels of Logic = 12)
+  Source:            vga/vcount_2 (FF)
+  Destination:       vga/vsync (FF)
   Source Clock:      clk50mhz rising 0.5X
   Destination Clock: clk50mhz rising 0.5X
 
-  Data Path: DD/address_3 to CD/data_2
+  Data Path: vga/vcount_2 to vga/vsync
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q           894   0.514   1.267  DD/address_3 (DD/address_3)
-     LUT4_D:I1->O         21   0.612   1.028  DD/rom/Mrom_data12781 (DD/rom/Mrom_data1278)
-     LUT2_D:I1->LO         1   0.612   0.103  DD/address<4>_mmx_out191 (N2016)
-     LUT4:I3->O            1   0.612   0.387  DD/address<5>21 (DD/address<5>21)
-     LUT3:I2->O            1   0.612   0.000  DD/rom/Mrom_data5941_22_f5_13_F (N1361)
-     MUXF5:I0->O           1   0.278   0.387  DD/rom/Mrom_data5941_22_f5_13 (DD/rom/Mrom_data5941_22_f514)
-     LUT3:I2->O            1   0.612   0.387  DD/address<8>41 (DD/address<8>5)
-     LUT3:I2->O            1   0.612   0.000  DD/rom/Mrom_data5941_12_f5_F (N1297)
-     MUXF5:I0->O           1   0.278   0.387  DD/rom/Mrom_data5941_12_f5 (DD/rom/Mrom_data5941_12_f5)
-     LUT3:I2->O            1   0.612   0.000  DD/rom/Mrom_data5941_7_f5_G (N1264)
-     MUXF5:I1->O           1   0.278   0.426  DD/rom/Mrom_data5941_7_f5 (DD/rom/Mrom_data5941_7_f5)
-     LUT3_L:I1->LO         1   0.612   0.103  DD/rom/Mrom_data5941_4 (DD/rom/Mrom_data5941_4)
-     LUT4:I3->O            1   0.612   0.000  CD/data_mux0000<2>1 (CD/data_mux0000<2>)
-     FDE:D                     0.268          CD/data_2
+     FD:C->Q               9   0.514   0.849  vga/vcount_2 (vga/vcount_2)
+     LUT1:I0->O            1   0.612   0.000  vga/Madd_old_vcount_2_addsub0000_cy<2>_rt (vga/Madd_old_vcount_2_addsub0000_cy<2>_rt)
+     MUXCY:S->O            1   0.404   0.000  vga/Madd_old_vcount_2_addsub0000_cy<2> (vga/Madd_old_vcount_2_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  vga/Madd_old_vcount_2_addsub0000_cy<3> (vga/Madd_old_vcount_2_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  vga/Madd_old_vcount_2_addsub0000_cy<4> (vga/Madd_old_vcount_2_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  vga/Madd_old_vcount_2_addsub0000_cy<5> (vga/Madd_old_vcount_2_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  vga/Madd_old_vcount_2_addsub0000_cy<6> (vga/Madd_old_vcount_2_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  vga/Madd_old_vcount_2_addsub0000_cy<7> (vga/Madd_old_vcount_2_addsub0000_cy<7>)
+     XORCY:CI->O           1   0.699   0.387  vga/Madd_old_vcount_2_addsub0000_xor<8> (vga/old_vcount_2_addsub0000<8>)
+     LUT4:I2->O            5   0.612   0.690  vga/_old_vcount_2<8>1 (vga/_old_vcount_2<8>)
+     LUT4:I0->O            3   0.612   0.454  vga/vsync_and000038 (vga/color_and000021)
+     LUT4_L:I3->LO         1   0.612   0.103  vga/vsync_and000048 (vga/vsync_and000048)
+     LUT4:I3->O            1   0.612   0.357  vga/vsync_and000075 (vga/vsync_and0000)
+     FDR:R                     0.795          vga/vsync
     ----------------------------------------
-    Total                     11.599ns (7.124ns logic, 4.475ns route)
-                                       (61.4% logic, 38.6% route)
+    Total                      8.570ns (5.729ns logic, 2.840ns route)
+                                       (66.9% logic, 33.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50mhz'
-  Total number of paths / destination ports: 99 / 45
+  Total number of paths / destination ports: 106 / 31
 -------------------------------------------------------------------------
-Offset:              4.312ns (Levels of Logic = 11)
-  Source:            izq (PAD)
-  Destination:       g/offset_8 (FF)
+Offset:              5.908ns (Levels of Logic = 4)
+  Source:            reset (PAD)
+  Destination:       DD/draw (FF)
   Destination Clock: clk50mhz rising 0.5X
 
-  Data Path: izq to g/offset_8
+  Data Path: reset to DD/draw
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            11   1.106   0.862  izq_IBUF (g/izq_inv_inv1)
-     LUT2:I1->O            1   0.612   0.000  g/Mcount_offset_lut<0> (g/Mcount_offset_lut<0>)
-     MUXCY:S->O            1   0.404   0.000  g/Mcount_offset_cy<0> (g/Mcount_offset_cy<0>)
-     MUXCY:CI->O           1   0.051   0.000  g/Mcount_offset_cy<1> (g/Mcount_offset_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  g/Mcount_offset_cy<2> (g/Mcount_offset_cy<2>)
-     MUXCY:CI->O           1   0.051   0.000  g/Mcount_offset_cy<3> (g/Mcount_offset_cy<3>)
-     MUXCY:CI->O           1   0.051   0.000  g/Mcount_offset_cy<4> (g/Mcount_offset_cy<4>)
-     MUXCY:CI->O           1   0.051   0.000  g/Mcount_offset_cy<5> (g/Mcount_offset_cy<5>)
-     MUXCY:CI->O           1   0.051   0.000  g/Mcount_offset_cy<6> (g/Mcount_offset_cy<6>)
-     MUXCY:CI->O           0   0.051   0.000  g/Mcount_offset_cy<7> (g/Mcount_offset_cy<7>)
-     XORCY:CI->O           1   0.699   0.000  g/Mcount_offset_xor<8> (g/Result<8>)
-     FDRE:D                    0.268          g/offset_8
+     IBUF:I->O            11   1.106   0.945  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            1   0.612   0.509  DD/draw_or00000 (DD/draw_or00000)
+     LUT4:I0->O            1   0.612   0.360  DD/draw_or000020 (DD/draw_or000020)
+     LUT4:I3->O            1   0.612   0.357  DD/draw_or000051 (DD/draw_or0000)
+     FDR:R                     0.795          DD/draw
     ----------------------------------------
-    Total                      4.312ns (3.450ns logic, 0.862ns route)
-                                       (80.0% logic, 20.0% route)
+    Total                      5.908ns (3.737ns logic, 2.171ns route)
+                                       (63.3% logic, 36.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50mhz'
-  Total number of paths / destination ports: 8 / 8
+  Total number of paths / destination ports: 6 / 6
 -------------------------------------------------------------------------
-Offset:              4.040ns (Levels of Logic = 1)
-  Source:            vga/vsync (FF)
-  Destination:       vsync (PAD)
+Offset:              4.063ns (Levels of Logic = 1)
+  Source:            vga/blue_out_1 (FF)
+  Destination:       blue_out<1> (PAD)
   Source Clock:      clk50mhz rising 0.5X
 
-  Data Path: vga/vsync to vsync
+  Data Path: vga/blue_out_1 to blue_out<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              1   0.514   0.357  vga/vsync (vga/vsync)
-     OBUF:I->O                 3.169          vsync_OBUF (vsync)
+     FDR:C->Q              2   0.514   0.380  vga/blue_out_1 (vga/blue_out_1)
+     OBUF:I->O                 3.169          blue_out_0_OBUF (blue_out<0>)
     ----------------------------------------
-    Total                      4.040ns (3.683ns logic, 0.357ns route)
-                                       (91.2% logic, 8.8% route)
+    Total                      4.063ns (3.683ns logic, 0.380ns route)
+                                       (90.6% logic, 9.4% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 329.00 secs
-Total CPU time to Xst completion: 329.12 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.91 secs
  
 --> 
 
-Total memory usage is 340288 kilobytes
+Total memory usage is 210048 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    7 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 

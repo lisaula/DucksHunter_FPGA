@@ -58,7 +58,7 @@
 	begin
 		//seting background
 		if(vcount < 240) begin
-			color = 6'b000111;
+			color = 6'b001111;
 		end
 		else if(vcount < 264)begin
 			color = 6'b001100;
