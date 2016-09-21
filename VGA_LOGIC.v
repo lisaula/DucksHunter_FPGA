@@ -15,6 +15,7 @@
  reg [9:0]vcount;
  reg [5:0]color;
  reg [6:0]contColumn;
+
  assign hor_count = hcount;
  assign ver_count = vcount;
  always @(posedge clk)
@@ -56,23 +57,13 @@
 	if(hcount < 640 && vcount <480)
 	begin
 		//seting background
-		if(hcount < 80)
-		begin
-			color = 6'h0;
-		end else if(hcount < 160) begin
-			color = 6'b001100;
-		end else if(hcount < 240) begin
-			color = 6'b001000;
-		end else if(hcount < 320) begin
-			color = 6'b000100;
-		end else if(hcount < 400) begin
+		if(vcount < 240) begin
 			color = 6'b000111;
-		end else if(hcount < 480) begin
-			color = 6'b000011;
-		end else if(hcount < 560) begin
-			color = 6'b001011;
+		end
+		else if(vcount < 264)begin
+			color = 6'b001100;
 		end else begin
-			color = 6'b000010;
+			color = 6'b001000;
 		end
 		
 		//setting image CarBlue

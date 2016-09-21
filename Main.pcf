@@ -1,10 +1,13 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Sep 20 13:11:15 2016
+// Written by: Map P.20131013 on Wed Sep 21 01:00:14 2016
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "der" LOCATE = SITE "C12" LEVEL 1;
+COMP "izq" LOCATE = SITE "D12" LEVEL 1;
 COMP "blue_out<0>" LOCATE = SITE "L8" LEVEL 1;
 COMP "blue_out<1>" LOCATE = SITE "N9" LEVEL 1;
+COMP "fire" LOCATE = SITE "C10" LEVEL 1;
 COMP "green_out<0>" LOCATE = SITE "P5" LEVEL 1;
 COMP "green_out<1>" LOCATE = SITE "N6" LEVEL 1;
 COMP "hsync" LOCATE = SITE "N8" LEVEL 1;

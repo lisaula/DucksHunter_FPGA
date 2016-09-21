@@ -44,7 +44,9 @@ Setup/Hold to clock clk50mhz
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-reset       |    4.593(R)|   -0.433(R)|vga_clk           |   0.000|
+der         |    1.864(R)|    0.451(R)|vga_clk           |   0.000|
+izq         |    2.166(R)|    0.714(R)|vga_clk           |   0.000|
+reset       |    4.964(R)|    0.473(R)|vga_clk           |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk50mhz to Pad
@@ -52,14 +54,14 @@ Clock clk50mhz to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-blue_out<0> |    8.317(R)|vga_clk           |   0.000|
-blue_out<1> |    7.609(R)|vga_clk           |   0.000|
-green_out<0>|    8.112(R)|vga_clk           |   0.000|
-green_out<1>|    8.610(R)|vga_clk           |   0.000|
-hsync       |    7.586(R)|vga_clk           |   0.000|
-red_out<0>  |    7.564(R)|vga_clk           |   0.000|
-red_out<1>  |    7.893(R)|vga_clk           |   0.000|
-vsync       |    8.162(R)|vga_clk           |   0.000|
+blue_out<0> |    8.200(R)|vga_clk           |   0.000|
+blue_out<1> |    7.669(R)|vga_clk           |   0.000|
+green_out<0>|    8.964(R)|vga_clk           |   0.000|
+green_out<1>|    8.630(R)|vga_clk           |   0.000|
+hsync       |    7.648(R)|vga_clk           |   0.000|
+red_out<0>  |    7.913(R)|vga_clk           |   0.000|
+red_out<1>  |    7.890(R)|vga_clk           |   0.000|
+vsync       |    8.586(R)|vga_clk           |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk50mhz
@@ -67,18 +69,18 @@ Clock to Setup on destination clock clk50mhz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk50mhz       |   12.612|         |         |         |
+clk50mhz       |   12.854|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Sep 20 13:24:58 2016 
+Analysis completed Wed Sep 21 01:30:27 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 133 MB
+Peak Memory Usage: 134 MB
 
 
 

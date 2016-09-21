@@ -1,0 +1,19 @@
+ISim log file
+Running: C:\Users\Raim\Documents\Diseno Logico Digital\PatoHunter\TB_main_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/TB_main_isim_beh.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Main.v" Line 36.  For instance main/CD/, width 6 of formal port data is not equal to width 1 of actual signal data.
+WARNING: File "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Main.v" Line 36.  For instance main/vga/, width 6 of formal port rgb_in is not equal to width 1 of actual signal data.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Main.v" Line 36.  For instance main/CD/, width 6 of formal port data is not equal to width 1 of actual signal data.
+WARNING: File "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Main.v" Line 36.  For instance main/vga/, width 6 of formal port rgb_in is not equal to width 1 of actual signal data.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

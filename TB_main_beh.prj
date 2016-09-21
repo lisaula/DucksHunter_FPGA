@@ -1,0 +1,8 @@
+verilog work "Ducks_Rom.v"
+verilog work "VGA_LOGIC.v"
+verilog work "Gun.v"
+verilog work "Ducks_Drawer.v"
+verilog work "Control_Drawer.v"
+verilog work "Main.v"
+verilog work "TB_main.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

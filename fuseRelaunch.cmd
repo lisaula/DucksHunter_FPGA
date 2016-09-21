@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/TB_main_isim_beh.exe" -prj "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/TB_main_beh.prj" "work.TB_main" "work.glbl" 
