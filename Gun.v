@@ -12,7 +12,7 @@ module Gun(
     );
 	
 	reg [9:0] offset;
-	reg [19:0]contador;
+	reg [15:0]contador;
 	always @(posedge clk)
 	begin		
 		draw = 0;
@@ -32,7 +32,7 @@ module Gun(
 			end
 		end
 		contador = contador +1;
-		if(contador >=100000) begin
+		if(contador >=50000) begin
 			contador = 0;
 			if(izq) begin
 				if(offset >0) begin

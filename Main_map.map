@@ -9,10 +9,22 @@ Target Device  : xc3s500e
 Target Package : ft256
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Sep 21 03:27:31 2016
+Mapped Date    : Wed Sep 21 04:03:44 2016
 
 Mapping design into LUTs...
 Running directed packing...
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2791_17 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2391_14_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2791_181 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2391_15_f5_2.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data1421_173 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data521_20_f5.  There is a conflict for
+   the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data1951_135 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data1951_12_f5_3.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
@@ -24,18 +36,18 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    5
 Logic Utilization:
-  Number of Slice Flip Flops:            61 out of   9,312    1%
-  Number of 4 input LUTs:               151 out of   9,312    1%
+  Number of Slice Flip Flops:            89 out of   9,312    1%
+  Number of 4 input LUTs:               650 out of   9,312    6%
 Logic Distribution:
-  Number of occupied Slices:            122 out of   4,656    2%
-    Number of Slices containing only related logic:     122 out of     122 100%
-    Number of Slices containing unrelated logic:          0 out of     122   0%
+  Number of occupied Slices:            414 out of   4,656    8%
+    Number of Slices containing only related logic:     414 out of     414 100%
+    Number of Slices containing unrelated logic:          0 out of     414   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         219 out of   9,312    2%
-    Number used as logic:               151
-    Number used as a route-thru:         68
+  Total Number of 4 input LUTs:         725 out of   9,312    7%
+    Number used as logic:               650
+    Number used as a route-thru:         75
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -44,9 +56,9 @@ Logic Distribution:
   Number of BUFGMUXs:                     1 out of      24    4%
   Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                2.39
+Average Fanout of Non-Clock Nets:                4.25
 
-Peak Memory Usage:  207 MB
+Peak Memory Usage:  208 MB
 Total REAL time to MAP completion:  1 secs 
 Total CPU time to MAP completion:   1 secs 
 

@@ -1,3 +1,4 @@
+verilog work "Ducks_Rom.v"
 verilog work "VGA_LOGIC.v"
 verilog work "Gun.v"
 verilog work "Ducks_Drawer.v"
