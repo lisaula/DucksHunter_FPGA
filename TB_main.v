@@ -11,8 +11,8 @@ module TB_main(
    wire [1:0]blue_out;
 	wire hsync;
 	wire vsync;
-	
-	Main main(clk, reset, izq, der,fire,red_out,green_out, blue_out,hsync,vsync);
+	wire [7:0]led;
+	Main main(clk, reset, izq, der,fire,red_out,green_out, blue_out,hsync,vsync, led);
 	
 	initial 
 	begin

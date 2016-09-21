@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Sep 21 04:03:46 2016
+// Written by: Map P.20131013 on Wed Sep 21 05:17:56 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -14,6 +14,14 @@ COMP "hsync" LOCATE = SITE "N8" LEVEL 1;
 COMP "reset" LOCATE = SITE "C13" LEVEL 1;
 COMP "vsync" LOCATE = SITE "M6" LEVEL 1;
 COMP "clk50mhz" LOCATE = SITE "B8" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "C11" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "D11" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "B11" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "A12" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "A13" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "B13" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "A14" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "B14" LEVEL 1;
 COMP "red_out<0>" LOCATE = SITE "P8" LEVEL 1;
 COMP "red_out<1>" LOCATE = SITE "M8" LEVEL 1;
 SCHEMATIC END;

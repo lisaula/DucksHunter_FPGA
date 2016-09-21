@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2591" delta="old" ><arg fmt="%s" index="1">&quot;Main.v&quot; line 23:</arg> <arg fmt="%s" index="2">attribute on instance</arg> &lt;<arg fmt="%s" index="3">CLKFX_DIVIDE</arg>&gt; overrides <arg fmt="%s" index="4">generic/parameter on entity</arg>. It is possible that simulator will not take this attribute into account.
+<msg type="warning" file="Xst" num="2591" delta="old" ><arg fmt="%s" index="1">&quot;Main.v&quot; line 24:</arg> <arg fmt="%s" index="2">attribute on instance</arg> &lt;<arg fmt="%s" index="3">CLKFX_DIVIDE</arg>&gt; overrides <arg fmt="%s" index="4">generic/parameter on entity</arg>. It is possible that simulator will not take this attribute into account.
 </msg>
 
-<msg type="warning" file="Xst" num="2591" delta="old" ><arg fmt="%s" index="1">&quot;Main.v&quot; line 23:</arg> <arg fmt="%s" index="2">attribute on instance</arg> &lt;<arg fmt="%s" index="3">CLKFX_MULTIPLY</arg>&gt; overrides <arg fmt="%s" index="4">generic/parameter on entity</arg>. It is possible that simulator will not take this attribute into account.
+<msg type="warning" file="Xst" num="2591" delta="old" ><arg fmt="%s" index="1">&quot;Main.v&quot; line 24:</arg> <arg fmt="%s" index="2">attribute on instance</arg> &lt;<arg fmt="%s" index="3">CLKFX_MULTIPLY</arg>&gt; overrides <arg fmt="%s" index="4">generic/parameter on entity</arg>. It is possible that simulator will not take this attribute into account.
 </msg>
 
 <msg type="info" file="Xst" num="2546" delta="old" >&quot;<arg fmt="%s" index="1">Ducks_Rom.v</arg>&quot; line <arg fmt="%d" index="2">13</arg>: reading initialization file &quot;<arg fmt="%s" index="3">shootDuck.mif</arg>&quot;.
@@ -19,6 +19,9 @@
 </msg>
 
 <msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Gun</arg>&gt; has a constant value of <arg fmt="%s" index="3">000000</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">data</arg>&gt; in unit &lt;<arg fmt="%s" index="2">Shot_Drawer</arg>&gt; has a constant value of <arg fmt="%s" index="3">101010</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">fire</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.

@@ -5,6 +5,7 @@ Turning on mult-threading, number of parallel sub-compilation jobs: 0
 Determining compilation order of HDL files
 Analyzing Verilog file "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Ducks_Rom.v" into library work
 Analyzing Verilog file "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/VGA_LOGIC.v" into library work
+Analyzing Verilog file "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Shot_Drawer.v" into library work
 Analyzing Verilog file "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Gun.v" into library work
 Analyzing Verilog file "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Ducks_Drawer.v" into library work
 Analyzing Verilog file "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Control_Drawer.v" into library work
@@ -18,13 +19,14 @@ Fuse CPU Usage: 202 ms
 Compiling module Ducks_Rom
 Compiling module Ducks_Drawer
 Compiling module Gun
+Compiling module Shot_Drawer
 Compiling module Control_Drawer
 Compiling module VGA_LOGIC
 Compiling module Main
 Compiling module TB_main
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 8 Verilog Units
+Compiled 9 Verilog Units
 Built simulation executable C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/TB_main_isim_beh.exe
 Fuse Memory Usage: 103512 KB
-Fuse CPU Usage: 202 ms
+Fuse CPU Usage: 218 ms

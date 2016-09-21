@@ -22,9 +22,9 @@
 #define alloca _alloca
 #endif
 static const char *ng0 = "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Ducks_Rom.v";
-static const char *ng1 = "Psyduck.mif";
+static const char *ng1 = "shootDuck.mif";
 static int ng2[] = {0, 0};
-static int ng3[] = {32767, 0};
+static int ng3[] = {4095, 0};
 
 
 
@@ -73,7 +73,7 @@ LAB4:    xsi_set_current_line(10, ng0);
     t13 = *((char **)t12);
     t14 = (t0 + 600U);
     t15 = *((char **)t14);
-    xsi_vlog_generic_get_array_select_value(t7, 6, t6, t10, t13, 2, 1, t15, 15, 2);
+    xsi_vlog_generic_get_array_select_value(t7, 6, t6, t10, t13, 2, 1, t15, 12, 2);
     t14 = (t0 + 828);
     xsi_vlogvar_assign_value(t14, t7, 0, 0, 6);
     goto LAB2;

@@ -8,9 +8,9 @@ module Gun(
 	input der,
 	input fire,
 	output reg [5:0]data,
-	output reg draw
+	output reg draw,
+	output reg [9:0] pos_x
     );
-	
 	reg [9:0] offset;
 	reg [15:0]contador;
 	always @(posedge clk)
@@ -20,6 +20,7 @@ module Gun(
 			if(hcount >= (offset + 26) && hcount <=(offset + 36))begin
 				data = 0;
 				draw=1;
+				pos_x = offset + 26;
 			end
 		end
 		

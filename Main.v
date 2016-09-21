@@ -10,10 +10,11 @@ module Main(
    output [1:0]green_out,
    output [1:0]blue_out,
 	output hsync,
-	output vsync
+	output vsync,
+	output [7:0]led
     );
 	 
-   wire vga_clk; //= clk50mhz;
+   wire vga_clk;//= clk50mhz;
 	wire [9:0]hcount;
 	wire [9:0]vcount;
 	//reg [14:0] address;
@@ -30,11 +31,24 @@ module Main(
 	
 	wire [5:0] gun_data;
 	wire gun_drawer;
-	Gun g(vga_clk, reset, hcount, vcount, izq, der, fire, gun_data, gun_drawer);
+	wire [9:0] pos_x;
+	assign led[0] = pos_x[0];
+	assign led[1] = pos_x[1];
+	assign led[2] = pos_x[2];
+	assign led[3] = pos_x[3];
+	assign led[4] = pos_x[4];
+	assign led[5] = pos_x[5];
+	assign led[6] = pos_x[6];
+	assign led[7] = pos_x[7];
+	Gun g(vga_clk, reset, hcount, vcount, izq, der, fire, gun_data, gun_drawer, pos_x);
+	
+	wire [5:0] shot_data; 
+	wire shot_drawer;
+	Shot_Drawer SD(vga_clk, reset, fire, hcount, vcount,pos_x, shot_data, shot_drawer);
 	
 	wire draw;
 	wire [5:0]data;
-	Control_Drawer CD(vga_clk, duck_draw, gun_drawer, duck_data, data, draw);
+	Control_Drawer CD(vga_clk, duck_draw, gun_drawer,shot_drawer, duck_data, shot_data, data, draw);
 	
 	VGA_LOGIC vga(vga_clk,data,draw,red_out,green_out,blue_out,hsync,vsync,hcount, vcount);
 	
