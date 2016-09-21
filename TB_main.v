@@ -25,6 +25,10 @@ module TB_main(
 		reset =1;
 		#20;
 		reset =0;
+		#20;
+		izq =1;
+		#60;
+		izq = 0;
 		
 		
 	end

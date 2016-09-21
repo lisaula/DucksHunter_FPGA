@@ -8,15 +8,15 @@ module Ducks_Drawer(
 	output reg draw
     );
 	 
-	reg [14:0] address;
+	reg [11:0] address;
 	Ducks_Rom rom(address, data);
 	always @(posedge clk)
 	begin
 		draw = 0;
 		
-		if(vcount< 162)
+		if(vcount< 59)
 		begin
-			if(hcount < 124)
+			if(hcount < 68)
 			begin
 				draw = 1;
 				address = address +1;

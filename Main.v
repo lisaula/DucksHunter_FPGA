@@ -13,7 +13,7 @@ module Main(
 	output vsync
     );
 	 
-   wire vga_clk;// = clk50mhz;
+   wire vga_clk; //= clk50mhz;
 	wire [9:0]hcount;
 	wire [9:0]vcount;
 	//reg [14:0] address;
