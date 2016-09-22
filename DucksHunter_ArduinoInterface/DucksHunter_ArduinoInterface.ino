@@ -1,38 +1,34 @@
-unsigned char btnIzquierda=13,btnDerecha=12,btnDisparo=11;
-unsigned char pinIzquierda=10,pinDerecha=9,pinDisparo=8;
+unsigned char btnIzquierda=13,btnDerecha=12,btnDisparo=11, btnReset=22;
+unsigned char pinIzquierda=10,pinDerecha=9,pinDisparo=8, pinReset=23;
 unsigned char pinesPatosMatados[] = {7,6,5,4,3,2};
 
 int patosMatados;
 int balas,timeout,tiempo;
-int disparando;
+int disparando,reset;
 
 bool puedeDisparar();
 void disparar();
-bool dispararPresionado();
+bool btnPresionado(unsigned char btn, int *estadoBtn);
 int readFromPins(unsigned char *pins, int size);
+void resetGame();
 
 void setup() {
   Serial.begin(9600);
-  
-  balas=20;
-  timeout=50;
-  tiempo=30;
-  
-  disparando=0;
 
+  timeout=50;
+  reset=0;
+  
   pinMode(pinIzquierda,OUTPUT);
   pinMode(pinDerecha,OUTPUT);
   pinMode(pinDisparo,OUTPUT);
+  pinMode(pinReset,OUTPUT);
 
   pinMode(btnIzquierda,INPUT);
   pinMode(btnDerecha,INPUT);
   pinMode(btnDisparo,INPUT);
+  pinMode(btnReset,INPUT);
 
-  Serial.print("tiempo: ");
-  Serial.print(tiempo);
-  Serial.print("; balas: ");
-  Serial.println(balas);
-  Serial.println("---------------------\n");
+  resetGame();
 }
 
 void loop() {
@@ -46,6 +42,13 @@ void loop() {
     Serial.println(balas);
   }else{
     digitalWrite(pinDisparo,LOW);
+  }
+
+  if(btnPresionado(btnReset,&reset))
+  {
+    resetGame();
+  }else{
+    digitalWrite(pinReset,LOW);
   }
 }
 
@@ -78,6 +81,25 @@ void disparar()
     digitalWrite(pinDisparo,HIGH);
     delay(timeout);
   }
+}
+
+void resetGame()
+{
+  balas=20;
+  tiempo=30;
+  
+  disparando=0;
+
+  digitalWrite(pinReset,HIGH);
+  delay(timeout);
+
+  Serial.println("-         Start         -");
+  Serial.println("-------------------------");
+  Serial.print("- tiempo: ");
+  Serial.print(tiempo);
+  Serial.print("; balas: ");
+  Serial.print(balas);
+  Serial.println(" -\n-------------------------\n");
 }
 
 int readFromPins(unsigned char *pins, int size)
