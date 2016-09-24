@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/TB_main_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TB_main" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/TB_main/red_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">red_out[1:0]</obj_property>
+      <obj_property name="ObjectShortName">red_out[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/green_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">green_out[1:0]</obj_property>
+      <obj_property name="ObjectShortName">green_out[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/blue_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">blue_out[1:0]</obj_property>
+      <obj_property name="ObjectShortName">blue_out[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/hsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hsync</obj_property>
+      <obj_property name="ObjectShortName">hsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/vsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vsync</obj_property>
+      <obj_property name="ObjectShortName">vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/led" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">led[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/izq" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">izq</obj_property>
+      <obj_property name="ObjectShortName">izq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/der" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">der</obj_property>
+      <obj_property name="ObjectShortName">der</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/fire" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fire</obj_property>
+      <obj_property name="ObjectShortName">fire</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/SB/position_y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">position_y[9:0]</obj_property>
+      <obj_property name="ObjectShortName">position_y[9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/SB/position_y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">position_y[9:0]</obj_property>
+      <obj_property name="ObjectShortName">position_y[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/SB/Y_Positions" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Y_Positions[0:63,9:0]</obj_property>
+      <obj_property name="ObjectShortName">Y_Positions[0:63,9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/SB/address" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">address[5:0]</obj_property>
+      <obj_property name="ObjectShortName">address[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/CD/shot_drawer" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">shot_drawer</obj_property>
+      <obj_property name="ObjectShortName">shot_drawer</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/CP/peticion1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">peticion1</obj_property>
+      <obj_property name="ObjectShortName">peticion1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/CP/peticion2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">peticion2</obj_property>
+      <obj_property name="ObjectShortName">peticion2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/CP/pos_y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pos_y[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pos_y[9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/CP/pos_y2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pos_y2[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pos_y2[9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/SB/peticion" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">peticion</obj_property>
+      <obj_property name="ObjectShortName">peticion</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/BD/pedir_nueva_pos" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pedir_nueva_pos</obj_property>
+      <obj_property name="ObjectShortName">pedir_nueva_pos</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/BD/pos_y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pos_y[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pos_y[9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_main/main/BD/vcount" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">vcount[9:0]</obj_property>
+      <obj_property name="ObjectShortName">vcount[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

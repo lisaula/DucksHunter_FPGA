@@ -1,0 +1,3 @@
+verilog work "Shot_Builder.v"
+verilog work "tb_Shot_Builder.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

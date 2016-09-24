@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/tb_Shot_Builder_isim_beh1.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_Shot_Builder" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/tb_Shot_Builder/position_y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">position_y[9:0]</obj_property>
+      <obj_property name="ObjectShortName">position_y[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/position_x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">position_x[9:0]</obj_property>
+      <obj_property name="ObjectShortName">position_x[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/conta" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">conta[5:0]</obj_property>
+      <obj_property name="ObjectShortName">conta[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/fire" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fire</obj_property>
+      <obj_property name="ObjectShortName">fire</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/pos_x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pos_x[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pos_x[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/vcount" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">vcount[9:0]</obj_property>
+      <obj_property name="ObjectShortName">vcount[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/hcount" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">hcount[9:0]</obj_property>
+      <obj_property name="ObjectShortName">hcount[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/peticion" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">peticion</obj_property>
+      <obj_property name="ObjectShortName">peticion</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/SB/valid" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">valid[0:63]</obj_property>
+      <obj_property name="ObjectShortName">valid[0:63]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/SB/Y_Positions" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Y_Positions[0:63,9:0]</obj_property>
+      <obj_property name="ObjectShortName">Y_Positions[0:63,9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/SB/X_Positions" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">X_Positions[0:63,9:0]</obj_property>
+      <obj_property name="ObjectShortName">X_Positions[0:63,9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/SB/address" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">address[5:0]</obj_property>
+      <obj_property name="ObjectShortName">address[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/SB/new_address" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">new_address[5:0]</obj_property>
+      <obj_property name="ObjectShortName">new_address[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/SB/seekAdrr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">seekAdrr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">seekAdrr[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Shot_Builder/SB/inc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">inc</obj_property>
+      <obj_property name="ObjectShortName">inc</obj_property>
+   </wvobject>
+</wave_config>

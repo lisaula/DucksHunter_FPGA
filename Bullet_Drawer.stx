@@ -1,0 +1,37 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Bullet_Drawer.v" in library work
+ERROR:HDLCompilers:26 - "Bullet_Drawer.v" line 9 expecting ')', found '='
+ERROR:HDLCompilers:28 - "Bullet_Drawer.v" line 15 'draw' has not been declared
+ERROR:HDLCompilers:28 - "Bullet_Drawer.v" line 18 'pedir_nueva_pos' has not been declared
+ERROR:HDLCompilers:28 - "Bullet_Drawer.v" line 23 'draw' has not been declared
+ERROR:HDLCompilers:28 - "Bullet_Drawer.v" line 24 'pedir_nueva_pos' has not been declared
+ERROR:HDLCompilers:28 - "Bullet_Drawer.v" line 29 'draw' has not been declared
+ERROR:HDLCompilers:28 - "Bullet_Drawer.v" line 30 'pedir_nueva_pos' has not been declared
+Module <Bullet_Drawer> compiled
+Analysis of file <"Bullet_Drawer.prj"> failed.
+--> 
+
+Total memory usage is 164692 kilobytes
+
+Number of errors   :    7 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
