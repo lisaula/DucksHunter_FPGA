@@ -14,14 +14,14 @@ module Main(
 	output [7:0]led
     );
 	 
-   wire vga_clk= clk50mhz;
+   wire vga_clk;//= clk50mhz;
 	wire [9:0]hcount;
 	wire [9:0]vcount;
 	//reg [14:0] address;
 	
 // synthesis attribute CLKFX_DIVIDE of vga_clock_dcm is 4
 // synthesis attribute CLKFX_MULTIPLY of vga_clock_dcm is 2
-	//DCM vga_clock_dcm (.CLKIN(clk50mhz),.CLKFX(vga_clk));
+	DCM vga_clock_dcm (.CLKIN(clk50mhz),.CLKFX(vga_clk));
 	
 	//Ducks_Rom rom(address,data);
 	
@@ -47,14 +47,43 @@ module Main(
 	wire shot_drawer;
 	//Shot_Drawer SD(vga_clk, reset, fire, hcount, vcount,pos_x, shot_data, shot_drawer);
 	
-	wire [9:0]position_y;
-	wire [9:0]position_x;
-	Shot_Builder SB(vga_clk, fire,reset, pos_x, position_y, position_x,contador_led);
+	wire [9:0]position_y1;
+	wire [9:0]position_x1;
+	wire [9:0]position_y2;
+	wire [9:0]position_x2;
+	wire [9:0]position_y3;
+	wire [9:0]position_x3;
+	wire [9:0]position_y4;
+	wire [9:0]position_x4;
+	wire [9:0]position_y5;
+	wire [9:0]position_x5;
+	wire [9:0]position_y6;
+	wire [9:0]position_x6;
+	wire [9:0]position_y7;
+	wire [9:0]position_x7;
+	wire [9:0]position_y8;
+	wire [9:0]position_x8;
+	Shot_Builder SB(vga_clk, fire,reset, pos_x, position_y1, position_x1,position_y2, position_x2,position_y3, position_x3,position_y4, position_x4,position_y5, position_x5,position_y6, position_x6,position_y7, position_x7,position_y8, position_x8,contador_led);
+	 
+	wire shot_drawer2;
+	wire shot_drawer3;	 
+	wire shot_drawer4; 
+	wire shot_drawer5; 
+	wire shot_drawer6; 
+	wire shot_drawer7; 
+	wire shot_drawer8;
+	Bullet_Drawer BD1(vga_clk, reset, hcount, vcount, position_x1, position_y1, shot_drawer);
+	Bullet_Drawer BD2(vga_clk, reset, hcount, vcount, position_x2, position_y2, shot_drawer2);
+	Bullet_Drawer BD3(vga_clk, reset, hcount, vcount, position_x3, position_y3, shot_drawer3);
+	Bullet_Drawer BD4(vga_clk, reset, hcount, vcount, position_x4, position_y4, shot_drawer4);
+	Bullet_Drawer BD5(vga_clk, reset, hcount, vcount, position_x5, position_y5, shot_drawer5);
+	Bullet_Drawer BD6(vga_clk, reset, hcount, vcount, position_x6, position_y6, shot_drawer6);
+	Bullet_Drawer BD7(vga_clk, reset, hcount, vcount, position_x7, position_y7, shot_drawer7);
+	Bullet_Drawer BD8(vga_clk, reset, hcount, vcount, position_x8, position_y8, shot_drawer8);
 	
-	Bullet_Drawer BD(vga_clk, reset, hcount, vcount, position_x, position_y, shot_data, shot_drawer);
 	wire draw;
 	wire [5:0]data;
-	Control_Drawer CD(vga_clk, duck_draw, gun_drawer,shot_drawer, duck_data, shot_data, data, draw);
+	Control_Drawer CD(clk50mhz, duck_draw, gun_drawer,shot_drawer,shot_drawer2,shot_drawer3,shot_drawer4,shot_drawer5,shot_drawer6,shot_drawer7,shot_drawer8, duck_data, data, draw);
 	
 	VGA_LOGIC vga(vga_clk,data,draw,red_out,green_out,blue_out,hsync,vsync,hcount, vcount);
 	

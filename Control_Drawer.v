@@ -3,9 +3,15 @@ module Control_Drawer(
 	input clk, 
 	input duck_drawer,
 	input gun_drawer,
-	input shot_drawer,
+	input shot_drawer1,
+	input shot_drawer2,
+	input shot_drawer3,
+	input shot_drawer4,
+	input shot_drawer5,
+	input shot_drawer6,
+	input shot_drawer7,
+	input shot_drawer8,
 	input [5:0]duck_data,
-	input [5:0] shot_data,
 	output reg [5:0]data,
 	output reg draw
     );
@@ -18,9 +24,9 @@ module Control_Drawer(
 		end else if (gun_drawer) begin
 			draw = 1;
 			data = 0;
-		end else if(shot_drawer)begin
+		end else if(shot_drawer1 ||shot_drawer2 ||shot_drawer3 ||shot_drawer4 ||shot_drawer5 ||shot_drawer6 ||shot_drawer7 ||shot_drawer8)begin
 			draw = 1;
-			data = shot_data;
+			data = 6'b101010;
 		end else begin
 			draw = 0;
 		end

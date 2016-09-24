@@ -7,7 +7,6 @@ module Bullet_Drawer(
 	input [9:0] vcount,
 	input [9:0] pos_x,
 	input signed [9:0] pos_y,
-	output reg [5:0] data, 
 	output reg draw
 	 );
 	 
@@ -16,7 +15,6 @@ module Bullet_Drawer(
 		
 		if($signed(vcount) >=pos_y && $signed(vcount)<=pos_y + 10) begin
 			if(hcount>=pos_x && hcount < pos_x +8) begin
-				data = 6'b101010;
 				draw = 1;
 			end
 		end
