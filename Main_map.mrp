@@ -9,37 +9,38 @@ Target Device  : xc3s500e
 Target Package : ft256
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sat Sep 24 13:27:02 2016
+Mapped Date    : Sat Sep 24 14:10:33 2016
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    8
+Number of warnings:    6
 Logic Utilization:
-  Number of Slice Flip Flops:           872 out of   9,312    9%
-  Number of 4 input LUTs:             1,904 out of   9,312   20%
+  Number of Slice Flip Flops:           213 out of   9,312    2%
+  Number of 4 input LUTs:               757 out of   9,312    8%
 Logic Distribution:
-  Number of occupied Slices:          1,088 out of   4,656   23%
-    Number of Slices containing only related logic:   1,088 out of   1,088 100%
-    Number of Slices containing unrelated logic:          0 out of   1,088   0%
+  Number of occupied Slices:            474 out of   4,656   10%
+    Number of Slices containing only related logic:     474 out of     474 100%
+    Number of Slices containing unrelated logic:          0 out of     474   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,023 out of   9,312   21%
-    Number used as logic:             1,904
-    Number used as a route-thru:        119
+  Total Number of 4 input LUTs:         883 out of   9,312    9%
+    Number used as logic:               737
+    Number used as a route-thru:        126
+    Number used for Dual Port RAMs:      20
+      (Two LUTs used per Dual Port RAM)
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
   Number of bonded IOBs:                 21 out of     190   11%
-  Number of RAMB16s:                      1 out of      20    5%
   Number of BUFGMUXs:                     1 out of      24    4%
   Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                4.32
+Average Fanout of Non-Clock Nets:                3.76
 
-Peak Memory Usage:  213 MB
-Total REAL time to MAP completion:  2 secs 
-Total CPU time to MAP completion:   2 secs 
+Peak Memory Usage:  209 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
 
 NOTES:
 
@@ -80,15 +81,9 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data481_152 failed to
-   merge with F5 multiplexer DD/rom/Mrom_data1651_11_f5_0.  There is a conflict
-   for the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_15 failed to
    merge with F5 multiplexer DD/rom/Mrom_data2131_14_f5.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data481_7 failed to merge
-   with F5 multiplexer DD/rom/Mrom_data1112_6_f5.  There is a conflict for the
-   FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator DD/rom/Mrom_data481_181 failed to
    merge with F5 multiplexer DD/rom/Mrom_data1651_15_f5.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
@@ -107,6 +102,15 @@ WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_153 failed to
 
 Section 3 - Informational
 -------------------------
+INFO:LIT:243 - Logical network SB/Mram_X_Positions9/SPO has no load.
+INFO:LIT:395 - The above info message is repeated 9 more times for the following
+   (max. 5 shown):
+   SB/Mram_X_Positions8/SPO,
+   SB/Mram_X_Positions10/SPO,
+   SB/Mram_X_Positions7/SPO,
+   SB/Mram_X_Positions6/SPO,
+   SB/Mram_X_Positions5/SPO
+   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
    with the CLKFX and CLKFX180 outputs of the DCM comp vga_clock_dcm, consult

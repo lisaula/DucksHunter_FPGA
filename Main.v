@@ -32,9 +32,10 @@ module Main(
 	wire [5:0] gun_data;
 	wire gun_drawer;
 	wire [9:0] pos_x;
-	assign led[0] = pos_x[0];
-	assign led[1] = pos_x[1];
-	assign led[2] = pos_x[2];
+	wire [2:0] contador_led;
+	assign led[0] = contador_led[0];
+	assign led[1] = contador_led[1];
+	assign led[2] = contador_led[2];
 	assign led[3] = pos_x[3];
 	assign led[4] = pos_x[4];
 	assign led[5] = pos_x[5];
@@ -48,7 +49,7 @@ module Main(
 	
 	wire [9:0]position_y;
 	wire [9:0]position_x;
-	Shot_Builder SB(vga_clk, fire,reset, pos_x, position_y, position_x);
+	Shot_Builder SB(vga_clk, fire,reset, pos_x, position_y, position_x,contador_led);
 	
 	Bullet_Drawer BD(vga_clk, reset, hcount, vcount, position_x, position_y, shot_data, shot_drawer);
 	wire draw;
