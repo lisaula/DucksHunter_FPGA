@@ -44,10 +44,10 @@ Setup/Hold to clock clk50mhz
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-der         |    2.070(R)|    0.276(R)|vga_clk           |   0.000|
-fire        |    5.287(R)|    0.595(R)|vga_clk           |   0.000|
-izq         |    2.933(R)|    0.363(R)|vga_clk           |   0.000|
-reset       |    4.469(R)|    0.427(R)|vga_clk           |   0.000|
+der         |    2.096(R)|    0.278(R)|vga_clk           |   0.000|
+fire        |    6.132(R)|    0.846(R)|vga_clk           |   0.000|
+izq         |    2.423(R)|    0.515(R)|vga_clk           |   0.000|
+reset       |    6.316(R)|    0.427(R)|vga_clk           |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk50mhz to Pad
@@ -55,22 +55,22 @@ Clock clk50mhz to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-blue_out<0> |    8.787(R)|vga_clk           |   0.000|
-blue_out<1> |    7.639(R)|vga_clk           |   0.000|
-green_out<0>|    8.491(R)|vga_clk           |   0.000|
-green_out<1>|    8.096(R)|vga_clk           |   0.000|
-hsync       |    8.445(R)|vga_clk           |   0.000|
-led<0>      |    8.584(R)|vga_clk           |   0.000|
-led<1>      |    8.455(R)|vga_clk           |   0.000|
-led<2>      |    8.347(R)|vga_clk           |   0.000|
-led<3>      |    8.810(R)|vga_clk           |   0.000|
-led<4>      |    8.486(R)|vga_clk           |   0.000|
-led<5>      |    8.485(R)|vga_clk           |   0.000|
-led<6>      |    8.383(R)|vga_clk           |   0.000|
-led<7>      |    8.597(R)|vga_clk           |   0.000|
-red_out<0>  |    7.335(R)|vga_clk           |   0.000|
-red_out<1>  |    8.057(R)|vga_clk           |   0.000|
-vsync       |    8.151(R)|vga_clk           |   0.000|
+blue_out<0> |    7.880(R)|vga_clk           |   0.000|
+blue_out<1> |    7.591(R)|vga_clk           |   0.000|
+green_out<0>|    8.480(R)|vga_clk           |   0.000|
+green_out<1>|    8.374(R)|vga_clk           |   0.000|
+hsync       |    8.024(R)|vga_clk           |   0.000|
+led<0>      |    8.863(R)|vga_clk           |   0.000|
+led<1>      |    8.764(R)|vga_clk           |   0.000|
+led<2>      |    8.311(R)|vga_clk           |   0.000|
+led<3>      |    8.252(R)|vga_clk           |   0.000|
+led<4>      |    8.698(R)|vga_clk           |   0.000|
+led<5>      |    8.580(R)|vga_clk           |   0.000|
+led<6>      |    8.389(R)|vga_clk           |   0.000|
+led<7>      |    8.828(R)|vga_clk           |   0.000|
+red_out<0>  |    7.620(R)|vga_clk           |   0.000|
+red_out<1>  |    7.607(R)|vga_clk           |   0.000|
+vsync       |    8.079(R)|vga_clk           |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk50mhz
@@ -78,18 +78,18 @@ Clock to Setup on destination clock clk50mhz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk50mhz       |   11.215|         |         |         |
+clk50mhz       |   11.487|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Sep 21 08:03:43 2016 
+Analysis completed Sat Sep 24 13:30:57 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 131 MB
+Peak Memory Usage: 130 MB
 
 
 

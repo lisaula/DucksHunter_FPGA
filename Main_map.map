@@ -9,27 +9,33 @@ Target Device  : xc3s500e
 Target Package : ft256
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Sep 21 07:58:29 2016
+Mapped Date    : Sat Sep 24 13:27:02 2016
 
 Mapping design into LUTs...
 Running directed packing...
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data2791_17 failed to
-   merge with F5 multiplexer DD/rom/Mrom_data2391_14_f5_0.  There is a conflict
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data481_152 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data1651_11_f5_0.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data2791_181 failed to
-   merge with F5 multiplexer DD/rom/Mrom_data2391_15_f5_2.  There is a conflict
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_15 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2131_14_f5.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data521_18 failed to merge
-   with F5 multiplexer DD/rom/Mrom_data1951_17_f5.  There is a conflict for the
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data481_7 failed to merge
+   with F5 multiplexer DD/rom/Mrom_data1112_6_f5.  There is a conflict for the
    FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data521_191 failed to
-   merge with F5 multiplexer DD/rom/Mrom_data1951_19_f5.  There is a conflict
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data481_181 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data1651_15_f5.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data1951_135 failed to
-   merge with F5 multiplexer DD/rom/Mrom_data1951_12_f5_3.  There is a conflict
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_133 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2131_12_f5_1.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data521_196 failed to
-   merge with F5 multiplexer DD/rom/Mrom_data1951_18_f5_2.  There is a conflict
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_135 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2131_12_f5_3.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_136 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2131_12_f5_4.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_153 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2131_14_f5_0.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
 Running delay-based LUT packing...
 Running related packing...
@@ -40,18 +46,18 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    6
+Number of warnings:    8
 Logic Utilization:
-  Number of Slice Flip Flops:           871 out of   9,312    9%
-  Number of 4 input LUTs:             2,079 out of   9,312   22%
+  Number of Slice Flip Flops:           872 out of   9,312    9%
+  Number of 4 input LUTs:             1,904 out of   9,312   20%
 Logic Distribution:
-  Number of occupied Slices:          1,201 out of   4,656   25%
-    Number of Slices containing only related logic:   1,201 out of   1,201 100%
-    Number of Slices containing unrelated logic:          0 out of   1,201   0%
+  Number of occupied Slices:          1,088 out of   4,656   23%
+    Number of Slices containing only related logic:   1,088 out of   1,088 100%
+    Number of Slices containing unrelated logic:          0 out of   1,088   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,196 out of   9,312   23%
-    Number used as logic:             2,079
-    Number used as a route-thru:        117
+  Total Number of 4 input LUTs:       2,023 out of   9,312   21%
+    Number used as logic:             1,904
+    Number used as a route-thru:        119
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -61,9 +67,9 @@ Logic Distribution:
   Number of BUFGMUXs:                     1 out of      24    4%
   Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                4.43
+Average Fanout of Non-Clock Nets:                4.32
 
-Peak Memory Usage:  214 MB
+Peak Memory Usage:  213 MB
 Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   2 secs 
 

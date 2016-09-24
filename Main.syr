@@ -172,7 +172,7 @@ Analyzing module <Ducks_Drawer> in library <work>.
 Module <Ducks_Drawer> is correct for synthesis.
  
 Analyzing module <Ducks_Rom> in library <work>.
-INFO:Xst:2546 - "Ducks_Rom.v" line 13: reading initialization file "shootDuck.mif".
+INFO:Xst:2546 - "Ducks_Rom.v" line 13: reading initialization file "shootDuck_l.mif".
 WARNING:Xst:905 - "Ducks_Rom.v" line 10: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <rom_content>
 Module <Ducks_Rom> is correct for synthesis.
@@ -324,7 +324,7 @@ Unit <VGA_LOGIC> synthesized.
 Synthesizing Unit <Ducks_Rom>.
     Related source file is "Ducks_Rom.v".
 WARNING:Xst:1781 - Signal <rom_content> is used but never assigned. Tied to default value.
-    Found 4096x6-bit ROM for signal <data>.
+    Found 2048x6-bit ROM for signal <data>.
     Summary:
 	inferred   1 ROM(s).
 Unit <Ducks_Rom> synthesized.
@@ -333,7 +333,7 @@ Unit <Ducks_Rom> synthesized.
 Synthesizing Unit <Ducks_Drawer>.
     Related source file is "Ducks_Drawer.v".
     Found 1-bit register for signal <draw>.
-    Found 12-bit up counter for signal <address>.
+    Found 11-bit up counter for signal <address>.
     Found 10-bit comparator less for signal <address$cmp_lt0000> created at line 19.
     Found 10-bit comparator greatequal for signal <draw$cmp_ge0000> created at line 17.
     Found 10-bit comparator greatequal for signal <draw$cmp_ge0001> created at line 19.
@@ -357,7 +357,7 @@ Macro Statistics
 # RAMs                                                 : 1
  64x10-bit dual-port RAM                               : 1
 # ROMs                                                 : 1
- 4096x6-bit ROM                                        : 1
+ 2048x6-bit ROM                                        : 1
 # Adders/Subtractors                                   : 13
  10-bit adder                                          : 3
  10-bit adder carry out                                : 4
@@ -368,7 +368,7 @@ Macro Statistics
  6-bit adder                                           : 2
 # Counters                                             : 4
  10-bit updown counter                                 : 1
- 12-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
  16-bit up counter                                     : 1
  17-bit up counter                                     : 1
 # Registers                                            : 145
@@ -434,7 +434,7 @@ Macro Statistics
 # RAMs                                                 : 1
  64x10-bit dual-port block RAM                         : 1
 # ROMs                                                 : 1
- 4096x6-bit ROM                                        : 1
+ 2048x6-bit ROM                                        : 1
 # Adders/Subtractors                                   : 13
  10-bit adder                                          : 3
  10-bit adder carry out                                : 4
@@ -445,7 +445,7 @@ Macro Statistics
  6-bit adder                                           : 2
 # Counters                                             : 4
  10-bit updown counter                                 : 1
- 12-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
  16-bit up counter                                     : 1
  17-bit up counter                                     : 1
 # Registers                                            : 771
@@ -489,7 +489,9 @@ Optimizing unit <VGA_LOGIC> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 26.
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 24.
+FlipFlop DD/address_2 has been replicated 1 time(s)
+FlipFlop DD/address_3 has been replicated 1 time(s)
 FlipFlop SB/address_0 has been replicated 30 time(s)
 FlipFlop SB/address_1 has been replicated 11 time(s)
 FlipFlop SB/address_2 has been replicated 2 time(s)
@@ -501,8 +503,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 871
- Flip-Flops                                            : 871
+# Registers                                            : 872
+ Flip-Flops                                            : 872
 
 =========================================================================
 
@@ -531,31 +533,31 @@ Design Statistics
 # IOs                              : 21
 
 Cell Usage :
-# BELS                             : 3207
+# BELS                             : 2891
 #      GND                         : 1
 #      INV                         : 26
-#      LUT1                        : 111
-#      LUT2                        : 104
-#      LUT2_D                      : 4
+#      LUT1                        : 110
+#      LUT2                        : 109
+#      LUT2_D                      : 3
 #      LUT2_L                      : 4
-#      LUT3                        : 663
-#      LUT3_D                      : 29
-#      LUT3_L                      : 8
-#      LUT4                        : 1150
-#      LUT4_D                      : 74
-#      LUT4_L                      : 14
-#      MUXCY                       : 244
-#      MUXF5                       : 373
-#      MUXF6                       : 161
-#      MUXF7                       : 67
-#      MUXF8                       : 27
+#      LUT3                        : 607
+#      LUT3_D                      : 25
+#      LUT3_L                      : 2
+#      LUT4                        : 1040
+#      LUT4_D                      : 80
+#      LUT4_L                      : 8
+#      MUXCY                       : 243
+#      MUXF5                       : 291
+#      MUXF6                       : 123
+#      MUXF7                       : 49
+#      MUXF8                       : 24
 #      VCC                         : 1
-#      XORCY                       : 146
-# FlipFlops/Latches                : 871
+#      XORCY                       : 145
+# FlipFlops/Latches                : 872
 #      FD                          : 11
 #      FDE                         : 662
 #      FDR                         : 110
-#      FDRE                        : 86
+#      FDRE                        : 87
 #      FDRSE                       : 1
 #      FDS                         : 1
 # RAMS                             : 1
@@ -575,9 +577,9 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                     1175  out of   4656    25%  
- Number of Slice Flip Flops:            871  out of   9312     9%  
- Number of 4 input LUTs:               2187  out of   9312    23%  
+ Number of Slices:                     1087  out of   4656    23%  
+ Number of Slice Flip Flops:            872  out of   9312     9%  
+ Number of 4 input LUTs:               2014  out of   9312    21%  
  Number of IOs:                          21
  Number of bonded IOBs:                  21  out of    190    11%  
  Number of BRAMs:                         1  out of     20     5%  
@@ -605,7 +607,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk50mhz                           | vga_clock_dcm:CLKFX    | 872   |
+clk50mhz                           | vga_clock_dcm:CLKFX    | 873   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -616,8 +618,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.206ns (Maximum Frequency: 192.094MHz)
-   Minimum input arrival time before clock: 5.405ns
+   Minimum period: 5.192ns (Maximum Frequency: 192.594MHz)
+   Minimum input arrival time before clock: 6.710ns
    Maximum output required time after clock: 4.063ns
    Maximum combinational path delay: No path found
 
@@ -627,54 +629,55 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50mhz'
-  Clock period: 5.206ns (frequency: 192.094MHz)
-  Total number of paths / destination ports: 3610897 / 1702
+  Clock period: 5.192ns (frequency: 192.594MHz)
+  Total number of paths / destination ports: 3610243 / 1705
 -------------------------------------------------------------------------
-Delay:               10.412ns (Levels of Logic = 9)
-  Source:            SB/new_address_0_1 (FF)
-  Destination:       SB/Y_Positions_30_9 (FF)
+Delay:               10.385ns (Levels of Logic = 9)
+  Source:            SB/new_address_0_2 (FF)
+  Destination:       SB/Y_Positions_61_9 (FF)
   Source Clock:      clk50mhz rising 0.5X
   Destination Clock: clk50mhz rising 0.5X
 
-  Data Path: SB/new_address_0_1 to SB/Y_Positions_30_9
+  Data Path: SB/new_address_0_2 to SB/Y_Positions_61_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             16   0.514   0.909  SB/new_address_0_1 (SB/new_address_0_1)
-     LUT3:I2->O            1   0.612   0.000  SB/Mmux_valid_Bit_9 (SB/Mmux_valid_Bit_9)
-     MUXF5:I1->O           1   0.278   0.000  SB/Mmux_valid_Bit_8_f5 (SB/Mmux_valid_Bit_8_f5)
-     MUXF6:I1->O           1   0.451   0.000  SB/Mmux_valid_Bit_7_f6 (SB/Mmux_valid_Bit_7_f6)
-     MUXF7:I1->O           1   0.451   0.000  SB/Mmux_valid_Bit_6_f7 (SB/Mmux_valid_Bit_6_f7)
-     MUXF8:I1->O           4   0.451   0.568  SB/Mmux_valid_Bit_5_f8 (SB/Mmux_valid_Bit_5_f8)
-     LUT4:I1->O            4   0.612   0.529  SB/_old_new_address_3<1>11 (SB/N32)
-     LUT3:I2->O           18   0.612   0.977  SB/_old_new_address_3<3>1 (SB/_old_new_address_3<3>)
-     LUT3:I1->O           19   0.612   0.991  SB/valid_24_cmp_eq000011 (SB/N9)
-     LUT4:I1->O           10   0.612   0.750  SB/Y_Positions_30_not0001 (SB/Y_Positions_30_not0001)
-     FDE:CE                    0.483          SB/Y_Positions_30_0
+     FDR:C->Q             16   0.514   0.909  SB/new_address_0_2 (SB/new_address_0_2)
+     LUT3:I2->O            1   0.612   0.000  SB/Mmux_valid_Bit_104 (SB/Mmux_valid_Bit_104)
+     MUXF5:I1->O           1   0.278   0.000  SB/Mmux_valid_Bit_9_f5_2 (SB/Mmux_valid_Bit_9_f53)
+     MUXF6:I1->O           1   0.451   0.000  SB/Mmux_valid_Bit_8_f6_1 (SB/Mmux_valid_Bit_8_f62)
+     MUXF7:I1->O           1   0.451   0.000  SB/Mmux_valid_Bit_7_f7_0 (SB/Mmux_valid_Bit_7_f71)
+     MUXF8:I1->O           4   0.451   0.568  SB/Mmux_valid_Bit_6_f8 (SB/Mmux_valid_Bit_6_f8)
+     LUT4:I1->O            4   0.612   0.502  SB/_old_new_address_3<1>11 (SB/N32)
+     LUT4:I3->O           18   0.612   0.977  SB/_old_new_address_3<4>1 (SB/_old_new_address_3<4>)
+     LUT3:I1->O           19   0.612   0.991  SB/valid_56_cmp_eq000011 (SB/N7)
+     LUT4:I1->O           10   0.612   0.750  SB/Y_Positions_61_not0001 (SB/Y_Positions_61_not0001)
+     FDE:CE                    0.483          SB/Y_Positions_61_0
     ----------------------------------------
-    Total                     10.412ns (5.688ns logic, 4.724ns route)
-                                       (54.6% logic, 45.4% route)
+    Total                     10.385ns (5.688ns logic, 4.697ns route)
+                                       (54.8% logic, 45.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50mhz'
-  Total number of paths / destination ports: 960 / 895
+  Total number of paths / destination ports: 961 / 896
 -------------------------------------------------------------------------
-Offset:              5.405ns (Levels of Logic = 3)
-  Source:            fire (PAD)
-  Destination:       SB/valid_63 (FF)
+Offset:              6.710ns (Levels of Logic = 4)
+  Source:            reset (PAD)
+  Destination:       DD/draw (FF)
   Destination Clock: clk50mhz rising 0.5X
 
-  Data Path: fire to SB/valid_63
+  Data Path: reset to DD/draw
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            14   1.106   1.002  fire_IBUF (fire_IBUF)
-     LUT3_D:I0->O         63   0.612   1.233  SB/valid_0_not000111 (SB/N0)
-     LUT3:I0->O            1   0.612   0.357  SB/valid_53_not00011 (SB/valid_53_not0001)
-     FDRE:CE                   0.483          SB/valid_53
+     IBUF:I->O           141   1.106   1.105  reset_IBUF (reset_IBUF)
+     LUT4:I3->O            1   0.612   0.509  DD/address_or00005 (DD/address_or00005)
+     LUT2:I0->O           14   0.612   1.002  DD/address_or000011 (DD/address_or0000)
+     LUT4:I0->O            1   0.612   0.357  DD/draw_or000025 (DD/draw_or0000)
+     FDR:R                     0.795          DD/draw
     ----------------------------------------
-    Total                      5.405ns (2.813ns logic, 2.592ns route)
-                                       (52.0% logic, 48.0% route)
+    Total                      6.710ns (3.737ns logic, 2.973ns route)
+                                       (55.7% logic, 44.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50mhz'
@@ -698,12 +701,12 @@ Offset:              4.063ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 17.91 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.94 secs
  
 --> 
 
-Total memory usage is 234816 kilobytes
+Total memory usage is 226880 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    7 (   0 filtered)
