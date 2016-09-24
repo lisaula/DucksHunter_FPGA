@@ -72,7 +72,7 @@ module Shot_Builder(
 		if(!fire && shouldInstantiate) begin
 			instantiate = 1;
 			valid[new_address]= 1'b1;
-			Y_Positions[new_address]=10'sd424;
+			Y_Positions[new_address]=10'sd4;//should be 424
 			X_Positions[new_address]=pos_x;
 			shouldInstantiate =0;
 		end
@@ -85,7 +85,7 @@ module Shot_Builder(
 			end
 			//------------------------
 			inc = 0;
-			if(position_y >=$signed(-10)) begin
+			if(position_y >=$signed(1)) begin
 				Y_Positions[address]=position_y-1;
 			end else begin
 				valid[address]= 1'b0;

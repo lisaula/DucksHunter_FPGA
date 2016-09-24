@@ -31,6 +31,14 @@ module TB_main(
 		izq = 0;
 		#20;
 		fire = 1;
+		#60;
+		fire = 0;
+		#20;
+		fire = 1;
+		#20;
+		fire = 0;
+		#20;
+		fire = 1;
 		#20;
 		fire = 0;
 		

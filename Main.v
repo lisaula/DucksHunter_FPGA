@@ -14,14 +14,14 @@ module Main(
 	output [7:0]led
     );
 	 
-   wire vga_clk;//= clk50mhz;
+   wire vga_clk= clk50mhz;
 	wire [9:0]hcount;
 	wire [9:0]vcount;
 	//reg [14:0] address;
 	
 // synthesis attribute CLKFX_DIVIDE of vga_clock_dcm is 4
 // synthesis attribute CLKFX_MULTIPLY of vga_clock_dcm is 2
-	DCM vga_clock_dcm (.CLKIN(clk50mhz),.CLKFX(vga_clk));
+	//DCM vga_clock_dcm (.CLKIN(clk50mhz),.CLKFX(vga_clk));
 	
 	//Ducks_Rom rom(address,data);
 	

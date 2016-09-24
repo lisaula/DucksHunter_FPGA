@@ -23,8 +23,8 @@
 #endif
 static const char *ng0 = "C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Ducks_Drawer.v";
 static int ng1[] = {0, 0};
-static int ng2[] = {59, 0};
-static int ng3[] = {68, 0};
+static int ng2[] = {40, 0};
+static int ng3[] = {46, 0};
 static int ng4[] = {1, 0};
 
 
@@ -110,7 +110,7 @@ LAB12:    xsi_set_current_line(26, ng0);
 LAB24:    xsi_set_current_line(27, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 1288);
-    xsi_vlogvar_assign_value(t3, t2, 0, 0, 12);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 11);
 
 LAB13:    xsi_set_current_line(30, ng0);
     t2 = (t0 + 692U);
@@ -185,9 +185,9 @@ LAB23:    xsi_set_current_line(21, ng0);
     t4 = *((char **)t3);
     t5 = ((char*)((ng4)));
     memset(t6, 0, 8);
-    xsi_vlog_unsigned_add(t6, 32, t4, 12, t5, 32);
+    xsi_vlog_unsigned_add(t6, 32, t4, 11, t5, 32);
     t7 = (t0 + 1288);
-    xsi_vlogvar_assign_value(t7, t6, 0, 0, 12);
+    xsi_vlogvar_assign_value(t7, t6, 0, 0, 11);
     goto LAB22;
 
 LAB25:    xsi_set_current_line(30, ng0);
@@ -195,7 +195,7 @@ LAB25:    xsi_set_current_line(30, ng0);
 LAB28:    xsi_set_current_line(31, ng0);
     t4 = ((char*)((ng1)));
     t5 = (t0 + 1288);
-    xsi_vlogvar_assign_value(t5, t4, 0, 0, 12);
+    xsi_vlogvar_assign_value(t5, t4, 0, 0, 11);
     xsi_set_current_line(32, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 1196);
