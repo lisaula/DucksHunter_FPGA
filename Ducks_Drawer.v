@@ -79,7 +79,7 @@ module Ducks_Drawer(
 			draw = 0;
 			pos_x = initial_posX;
 			pos_y =initial_posY;
-			offset_y=1;
+			offset_y=uPOrDown;
 			contadorY=0;
 			contadorX=0;
 			cont =0;

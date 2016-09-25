@@ -30,7 +30,56 @@ module Main(
 	wire [10:0] duckPos_x;
 	wire [9:0] duckPos_y;
 	wire collision;
-	Ducks_Drawer DD(vga_clk, reset,collision, hcount, vcount,duck_data, duck_draw, duckPos_x,duckPos_y);
+	Ducks_Drawer #(
+		.counterY_limit(260000),
+		.counterX_limit(60000),
+		.shouldIntercalate(0),
+		.initial_posY(10'sd0),
+		.initial_posX(-11'sd100),
+		.uPOrDown(1)
+		)DD(vga_clk, reset,collision, hcount, vcount,duck_data, duck_draw, duckPos_x,duckPos_y);
+	
+	wire duck_draw2;
+	wire [5:0] duck_data2;
+	wire [10:0] duckPos_x2;
+	wire [9:0] duckPos_y2;
+	wire collision2;
+	Ducks_Drawer #(
+		.counterY_limit(260000),
+		.counterX_limit(60000),
+		.shouldIntercalate(0),
+		.initial_posY(10'sd180),
+		.initial_posX(-11'sd200),
+		.uPOrDown(-1'sd1)
+		)DD2(vga_clk, reset,collision2, hcount, vcount,duck_data2, duck_draw2, duckPos_x2,duckPos_y2);
+	
+	wire duck_draw3;
+	wire [5:0] duck_data3;
+	wire [10:0] duckPos_x3;
+	wire [9:0] duckPos_y3;
+	wire collision3;
+	Ducks_Drawer #(
+		.counterY_limit(260000),
+		.counterX_limit(70000),
+		.shouldIntercalate(1),
+		.initial_posY(10'sd110),
+		.initial_posX(-11'sd50),
+		.uPOrDown(1'sd1)
+		)DD3(vga_clk, reset,collision3, hcount, vcount,duck_data3, duck_draw3, duckPos_x3,duckPos_y3);
+	
+	wire duck_draw4;
+	wire [5:0] duck_data4;
+	wire [10:0] duckPos_x4;
+	wire [9:0] duckPos_y4;
+	wire collision4;
+	Ducks_Drawer #(
+		.counterY_limit(260000),
+		.counterX_limit(80000),
+		.shouldIntercalate(1),
+		.initial_posY(10'sd70),
+		.initial_posX(-11'sd400),
+		.uPOrDown(1'sd1)
+		)DD4(vga_clk, reset,collision4, hcount, vcount,duck_data4, duck_draw4, duckPos_x4,duckPos_y4);
 	
 	wire [5:0] gun_data;
 	wire gun_drawer;
@@ -89,7 +138,12 @@ module Main(
 	
 	wire draw;
 	wire [5:0]data;
-	Control_Drawer CD(clk50mhz, duck_draw, gun_drawer,shot_drawer,shot_drawer2,shot_drawer3,shot_drawer4,shot_drawer5,shot_drawer6,shot_drawer7,shot_drawer8, duck_data, data, draw);
+	Control_Drawer CD(clk50mhz, 
+	duck_draw,duck_draw2,duck_draw3,duck_draw4, 
+	gun_drawer,
+	shot_drawer,shot_drawer2,shot_drawer3,shot_drawer4,shot_drawer5,shot_drawer6,shot_drawer7,shot_drawer8, 
+	duck_data,duck_data2,duck_data3,duck_data4, 
+	data, draw);
 	
 	VGA_LOGIC vga(vga_clk,data,draw,red_out,green_out,blue_out,hsync,vsync,hcount, vcount);
 	
