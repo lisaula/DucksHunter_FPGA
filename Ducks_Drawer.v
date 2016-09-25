@@ -2,6 +2,7 @@
 module Ducks_Drawer(
 	input clk,
 	input reset,
+	input collision,
 	input[9:0]hcount,
 	input[9:0]vcount,
 	output [5:0]data,
@@ -17,27 +18,32 @@ module Ducks_Drawer(
 	wire signed [11:0]sHcount  = {3'b000,hcount};
 	wire signed [9:0]sVcount = {3'b0,vcount};
 	reg [4:0]cont;
+	
+	parameter 
+		counterY_limit = 260000,
+		counterX_limit =  60000;
+	
 	always @(posedge clk)
 	begin
 		draw = 0;
 		
 		contadorY = contadorY +1;
-		if(contadorY >= 260000) begin
+		if(contadorY >= counterY_limit) begin
 			contadorY = 0;
 			cont = cont +1;
 			if(cont == 30)begin
 				offset_y = -1*offset_y;
 				cont = 0;
 			end
-			pos_y = pos_y+offset_y;
+			//pos_y = pos_y+offset_y;
 		end
 		
 		contadorX = contadorX +1;
-		if(contadorX > 60000)begin
+		if(contadorX > counterX_limit)begin
 			contadorX=0;
-			pos_x = pos_x-1;
+			//pos_x = pos_x-1;
 		end
-		if(pos_x<-11'sd46) begin
+		if(pos_x<-11'sd46 || collision) begin
 			pos_x = 11'sd640;
 		end
 		if( sVcount >=pos_y && sVcount < (pos_y+40))
@@ -56,8 +62,8 @@ module Ducks_Drawer(
 		if(reset)begin
 			address=0;
 			draw = 0;
-			pos_x = 11'sd594;
-			pos_y =10'sd150;
+			pos_x = 11'sd0;//594
+			pos_y =10'sd0;//150
 			offset_y=1;
 			contadorY=0;
 			contadorX=0;

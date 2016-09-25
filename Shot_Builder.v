@@ -101,9 +101,9 @@ module Shot_Builder(
 		end
 		if(!fire && shouldInstantiate) begin
 			instantiate = 1;
-			valid[new_address]= 1'b1;
-			Y_Positions[new_address]=10'sd424;//should be 424
-			X_Positions[new_address]=pos_x;
+			valid[3'd0]= 1'b1;//should be new_address
+			Y_Positions[3'd0]=10'sd424;//should be 424
+			X_Positions[3'd0]=pos_x;
 			shouldInstantiate =0;
 		end
 		

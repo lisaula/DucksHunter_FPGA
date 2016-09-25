@@ -29,7 +29,8 @@ module Main(
 	wire [5:0] duck_data;
 	wire [10:0] duckPos_x;
 	wire [9:0] duckPos_y;
-	Ducks_Drawer DD(vga_clk, reset, hcount, vcount,duck_data, duck_draw, duckPos_x,duckPos_y);
+	wire collision;
+	Ducks_Drawer DD(vga_clk, reset,collision, hcount, vcount,duck_data, duck_draw, duckPos_x,duckPos_y);
 	
 	wire [5:0] gun_data;
 	wire gun_drawer;
@@ -82,6 +83,9 @@ module Main(
 	Bullet_Drawer BD6(vga_clk, reset, hcount, vcount, position_x6, position_y6, shot_drawer6);
 	Bullet_Drawer BD7(vga_clk, reset, hcount, vcount, position_x7, position_y7, shot_drawer7);
 	Bullet_Drawer BD8(vga_clk, reset, hcount, vcount, position_x8, position_y8, shot_drawer8);
+	
+	
+	Comparator C(duckPos_x, duckPos_y, position_y1, position_x1, collision);
 	
 	wire draw;
 	wire [5:0]data;
