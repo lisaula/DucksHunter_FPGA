@@ -133,8 +133,33 @@ module Main(
 	Bullet_Drawer BD7(vga_clk, reset, hcount, vcount, position_x7, position_y7, shot_drawer7);
 	Bullet_Drawer BD8(vga_clk, reset, hcount, vcount, position_x8, position_y8, shot_drawer8);
 	
+	wire [9:0]bulletPosition_y;
+	wire [10:0] bulletPosition_x;
+	Collision_Control CC(clk50mhz, reset, 
+	position_y1,
+	position_x1,
+	position_y2,
+	position_x2,
+	position_y3,
+	position_x3,
+	position_y4,
+	position_x4,
+	position_y5,
+	position_x5,
+	position_y6,
+	position_x6,
+	position_y7,
+	position_x7,
+	position_y8,
+	position_x8,
+	bulletPosition_y,
+	bulletPosition_x);
 	
-	Comparator C(duckPos_x, duckPos_y, position_y1, position_x1, collision);
+	Comparator C(duckPos_x, duckPos_y, bulletPosition_y, bulletPosition_x, collision);
+	Comparator C2(duckPos_x2, duckPos_y2, bulletPosition_y, bulletPosition_x, collision2);
+	Comparator C3(duckPos_x3, duckPos_y3, bulletPosition_y, bulletPosition_x, collision3);
+	Comparator C4(duckPos_x4, duckPos_y4, bulletPosition_y, bulletPosition_x, collision4);
+	
 	
 	wire draw;
 	wire [5:0]data;

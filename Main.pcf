@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Sep 25 00:22:59 2016
+// Written by: Map P.20131013 on Sun Sep 25 11:18:38 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -24,5 +24,6 @@ COMP "led<6>" LOCATE = SITE "A14" LEVEL 1;
 COMP "led<7>" LOCATE = SITE "B14" LEVEL 1;
 COMP "red_out<0>" LOCATE = SITE "P8" LEVEL 1;
 COMP "red_out<1>" LOCATE = SITE "M8" LEVEL 1;
+NET "clk50mhz_IBUFG1" BEL "clk50mhz_IBUFG_BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 
