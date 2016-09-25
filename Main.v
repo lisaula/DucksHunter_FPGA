@@ -27,7 +27,9 @@ module Main(
 	
 	wire duck_draw;
 	wire [5:0] duck_data;
-	Ducks_Drawer DD(vga_clk, reset, hcount, vcount,duck_data, duck_draw);
+	wire [10:0] duckPos_x;
+	wire [9:0] duckPos_y;
+	Ducks_Drawer DD(vga_clk, reset, hcount, vcount,duck_data, duck_draw, duckPos_x,duckPos_y);
 	
 	wire [5:0] gun_data;
 	wire gun_drawer;

@@ -65,7 +65,7 @@ module Shot_Builder(
 	assign position_x8 =  X_Positions[3'd7];
 	
 	reg instantiate;	
-	reg [16:0] contador;
+	reg [15:0] contador;
 	reg decrementar;
 	always @(posedge clk)  begin
 	//-----------------debuggin-------------------
