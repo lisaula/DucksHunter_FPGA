@@ -134,6 +134,10 @@ Analyzing hierarchy for module <Main> in library <work>.
 Analyzing hierarchy for module <Ducks_Drawer> in library <work> with parameters.
 	counterX_limit = "00000000000000001110101001100000"
 	counterY_limit = "00000000000000111111011110100000"
+	initial_posX = "01001010010"
+	initial_posY = "0010010110"
+	shouldIntercalate = "00000000000000000000000000000000"
+	uPOrDown = "00000000000000000000000000000001"
 
 Analyzing hierarchy for module <Gun> in library <work>.
 
@@ -177,10 +181,14 @@ Module <Main> is correct for synthesis.
 Analyzing module <Ducks_Drawer> in library <work>.
 	counterX_limit = 32'sb00000000000000001110101001100000
 	counterY_limit = 32'sb00000000000000111111011110100000
+	initial_posX = 11'sb01001010010
+	initial_posY = 10'sb0010010110
+	shouldIntercalate = 32'sb00000000000000000000000000000000
+	uPOrDown = 32'sb00000000000000000000000000000001
 Module <Ducks_Drawer> is correct for synthesis.
  
 Analyzing module <Ducks_Rom> in library <work>.
-INFO:Xst:2546 - "Ducks_Rom.v" line 13: reading initialization file "shootDuck_l.mif".
+INFO:Xst:2546 - "Ducks_Rom.v" line 13: reading initialization file "shootDuck_r.mif".
 WARNING:Xst:905 - "Ducks_Rom.v" line 10: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <rom_content>
 Module <Ducks_Rom> is correct for synthesis.
@@ -209,7 +217,6 @@ Module <VGA_LOGIC> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <pos_y> in unit <Ducks_Drawer> has a constant value of 0000000000 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <data> in unit <Gun> has a constant value of 000000 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <valid<1>> in unit <Shot_Builder> has a constant value of 0 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <valid<2>> in unit <Shot_Builder> has a constant value of 0 during circuit operation. The register is replaced by logic.
@@ -243,7 +250,7 @@ WARNING:Xst:647 - Input <fire> is never used. This port will be preserved and le
     Found 10-bit comparator greatequal for signal <offset$cmp_ge0000> created at line 43.
     Found 10-bit comparator lessequal for signal <offset$cmp_le0000> created at line 39.
     Found 16-bit comparator less for signal <offset$cmp_lt0000> created at line 36.
-    Found 16-bit adder for signal <old_contador_5$add0000> created at line 35.
+    Found 16-bit adder for signal <old_contador_7$add0000> created at line 35.
     Found 10-bit adder for signal <pos_x$add0000> created at line 23.
     Found 11-bit comparator greater for signal <pos_x$cmp_gt0000> created at line 20.
     Found 10-bit comparator lessequal for signal <pos_x$cmp_le0000> created at line 19.
@@ -270,8 +277,8 @@ WARNING:Xst:653 - Signal <X_Positions<1:7>> is used but never assigned. This sou
     Found 1-bit register for signal <fin>.
     Found 1-bit register for signal <instantiate>.
     Found 3-bit up counter for signal <new_address>.
-    Found 16-bit adder for signal <old_contador_6$add0000> created at line 93.
-    Found 16-bit comparator greatequal for signal <old_decrementar_8$cmp_ge0000> created at line 94.
+    Found 16-bit adder for signal <old_contador_8$add0000> created at line 93.
+    Found 16-bit comparator greatequal for signal <old_decrementar_10$cmp_ge0000> created at line 94.
     Found 1-bit register for signal <shouldInstantiate>.
     Found 1-bit register for signal <valid<0>>.
     Found 32-bit comparator greatequal for signal <valid_0$cmp_ge0000> created at line 119.
@@ -362,8 +369,8 @@ WARNING:Xst:1780 - Signal <contColumn> is never used or assigned. This unconnect
     Found 10-bit register for signal <hcount>.
     Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 42.
     Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 42.
-    Found 10-bit adder for signal <old_hcount_11$addsub0000> created at line 33.
-    Found 10-bit adder for signal <old_vcount_10$addsub0000> created at line 30.
+    Found 10-bit adder for signal <old_hcount_13$addsub0000> created at line 33.
+    Found 10-bit adder for signal <old_vcount_12$addsub0000> created at line 30.
     Found 10-bit comparator less for signal <red_out$cmp_lt0000> created at line 48.
     Found 10-bit comparator less for signal <red_out$cmp_lt0001> created at line 48.
     Found 10-bit register for signal <vcount>.
@@ -389,32 +396,39 @@ Synthesizing Unit <Ducks_Drawer>.
     Related source file is "Ducks_Drawer.v".
     Found 1-bit register for signal <draw>.
     Found 11-bit register for signal <pos_x>.
+    Found 10-bit register for signal <pos_y>.
+    Found 11-bit adder for signal <add0000$add0000> created at line 64.
     Found 11-bit up counter for signal <address>.
-    Found 12-bit comparator greatequal for signal <address$cmp_ge0000> created at line 51.
-    Found 12-bit comparator less for signal <address$cmp_lt0000> created at line 51.
+    Found 12-bit comparator greatequal for signal <address$cmp_ge0000> created at line 66.
+    Found 12-bit comparator less for signal <address$cmp_lt0000> created at line 66.
     Found 5-bit up counter for signal <cont>.
-    Found 19-bit comparator greatequal for signal <cont$cmp_ge0000> created at line 31.
+    Found 19-bit comparator greatequal for signal <cont$cmp_ge0000> created at line 35.
     Found 17-bit up counter for signal <contadorX>.
-    Found 17-bit comparator greater for signal <contadorX$cmp_gt0000> created at line 42.
+    Found 17-bit comparator greater for signal <contadorX$cmp_gt0000> created at line 57.
     Found 18-bit up counter for signal <contadorY>.
-    Found 19-bit comparator greatequal for signal <contadorY$cmp_ge0000> created at line 31.
-    Found 12-bit adder for signal <draw$add0000> created at line 51.
-    Found 11-bit comparator greatequal for signal <draw$cmp_ge0000> created at line 49.
-    Found 12-bit comparator greatequal for signal <draw$cmp_ge0001> created at line 51.
-    Found 10-bit comparator less for signal <draw$cmp_lt0000> created at line 49.
-    Found 12-bit comparator less for signal <draw$cmp_lt0001> created at line 51.
+    Found 19-bit comparator greatequal for signal <contadorY$cmp_ge0000> created at line 35.
+    Found 12-bit adder for signal <draw$add0000> created at line 66.
+    Found 11-bit comparator greatequal for signal <draw$cmp_ge0000> created at line 64.
+    Found 12-bit comparator greatequal for signal <draw$cmp_ge0001> created at line 66.
+    Found 10-bit comparator less for signal <draw$cmp_lt0000> created at line 64.
+    Found 12-bit comparator less for signal <draw$cmp_lt0001> created at line 66.
     Found 5-bit register for signal <offset_y>.
-    Found 19-bit comparator less for signal <offset_y$cmp_lt0000> created at line 31.
-    Found 5-bit adder for signal <offset_y$sub0000>.
-    Found 5-bit adder for signal <old_cont_2$add0000> created at line 33.
-    Found 17-bit adder for signal <old_contadorX_3$add0000> created at line 41.
-    Found 18-bit adder for signal <old_contadorY_1$add0000> created at line 30.
-    Found 32-bit comparator less for signal <old_pos_x_4$cmp_lt0000> created at line 46.
+    Found 17-bit adder for signal <old_contadorX_4$add0000> created at line 56.
+    Found 18-bit adder for signal <old_contadorY_1$add0000> created at line 34.
+    Found 5-bit adder for signal <old_offset_y_2$addsub0000>.
+    Found 11-bit subtractor for signal <old_pos_x_5$addsub0000> created at line 59.
+    Found 17-bit comparator greater for signal <old_pos_x_5$cmp_gt0000> created at line 57.
+    Found 32-bit comparator less for signal <old_pos_x_6$cmp_lt0000> created at line 61.
+    Found 10-bit adder for signal <old_pos_y_3$addsub0000> created at line 48.
+    Found 1-bit register for signal <shouldStop>.
+    Found 11-bit comparator greatequal for signal <shouldStop$cmp_ge0000> created at line 51.
+    Found 32-bit comparator lessequal for signal <shouldStop$cmp_le0000> created at line 51.
+    Found 19-bit comparator less for signal <shouldStop$cmp_lt0000> created at line 35.
     Summary:
 	inferred   4 Counter(s).
-	inferred  17 D-type flip-flop(s).
-	inferred   5 Adder/Subtractor(s).
-	inferred  11 Comparator(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred  14 Comparator(s).
 Unit <Ducks_Drawer> synthesized.
 
 
@@ -431,34 +445,37 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  2048x6-bit ROM                                        : 1
-# Adders/Subtractors                                   : 39
- 10-bit adder                                          : 3
+# Adders/Subtractors                                   : 43
+ 10-bit adder                                          : 4
  10-bit adder carry out                                : 11
  10-bit subtractor                                     : 8
- 11-bit adder                                          : 10
+ 11-bit adder                                          : 11
+ 11-bit subtractor                                     : 1
  12-bit adder                                          : 3
  16-bit adder                                          : 2
+ 17-bit adder                                          : 1
  18-bit adder                                          : 1
  5-bit adder                                           : 1
 # Counters                                             : 9
  10-bit updown counter                                 : 1
  11-bit up counter                                     : 1
  16-bit up counter                                     : 2
+ 17-bit up counter                                     : 1
  18-bit up counter                                     : 1
  3-bit up counter                                      : 3
- 5-bit up counter                                      : 1
-# Registers                                            : 35
- 1-bit register                                        : 17
- 10-bit register                                       : 12
+# Registers                                            : 38
+ 1-bit register                                        : 18
+ 10-bit register                                       : 13
  11-bit register                                       : 1
  2-bit register                                        : 3
+ 5-bit register                                        : 1
  6-bit register                                        : 2
-# Comparators                                          : 83
+# Comparators                                          : 88
  10-bit comparator greatequal                          : 6
  10-bit comparator greater                             : 2
  10-bit comparator less                                : 24
  10-bit comparator lessequal                           : 3
- 11-bit comparator greatequal                          : 12
+ 11-bit comparator greatequal                          : 13
  11-bit comparator greater                             : 9
  11-bit comparator less                                : 1
  11-bit comparator lessequal                           : 4
@@ -467,9 +484,12 @@ Macro Statistics
  12-bit comparator lessequal                           : 2
  16-bit comparator greatequal                          : 3
  16-bit comparator less                                : 1
+ 17-bit comparator greater                             : 2
  19-bit comparator greatequal                          : 2
+ 19-bit comparator less                                : 1
  32-bit comparator greatequal                          : 1
  32-bit comparator less                                : 9
+ 32-bit comparator lessequal                           : 1
 # Multiplexers                                         : 2
  1-bit 8-to-1 multiplexer                              : 2
 
@@ -479,15 +499,10 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <pos_x_0> (without init value) has a constant value of 0 in block <DD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <pos_x_1> (without init value) has a constant value of 0 in block <DD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <pos_x_2> (without init value) has a constant value of 0 in block <DD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <pos_x_3> (without init value) has a constant value of 0 in block <DD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <pos_x_4> (without init value) has a constant value of 0 in block <DD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <pos_x_5> (without init value) has a constant value of 0 in block <DD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <pos_x_6> (without init value) has a constant value of 0 in block <DD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <pos_x_8> (without init value) has a constant value of 0 in block <DD>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <pos_x_10> (without init value) has a constant value of 0 in block <DD>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <Ducks_Drawer>.
+The following registers are absorbed into accumulator <pos_y>: 1 register on signal <pos_y>.
+Unit <Ducks_Drawer> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -495,26 +510,34 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  2048x6-bit ROM                                        : 1
-# Adders/Subtractors                                   : 37
- 10-bit adder                                          : 3
+# Adders/Subtractors                                   : 43
+ 10-bit adder                                          : 4
  10-bit adder carry out                                : 11
  10-bit subtractor                                     : 8
- 11-bit adder                                          : 10
+ 11-bit adder                                          : 11
+ 11-bit subtractor                                     : 1
  12-bit adder                                          : 3
  16-bit adder                                          : 2
-# Counters                                             : 6
+ 17-bit adder                                          : 1
+ 18-bit adder                                          : 1
+ 5-bit adder                                           : 1
+# Counters                                             : 8
  10-bit updown counter                                 : 1
  11-bit up counter                                     : 1
  16-bit up counter                                     : 2
+ 17-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
  3-bit up counter                                      : 2
-# Registers                                            : 165
- Flip-Flops                                            : 165
-# Comparators                                          : 81
+# Accumulators                                         : 1
+ 10-bit up loadable accumulator                        : 1
+# Registers                                            : 171
+ Flip-Flops                                            : 171
+# Comparators                                          : 88
  10-bit comparator greatequal                          : 6
  10-bit comparator greater                             : 2
  10-bit comparator less                                : 24
  10-bit comparator lessequal                           : 3
- 11-bit comparator greatequal                          : 12
+ 11-bit comparator greatequal                          : 13
  11-bit comparator greater                             : 9
  11-bit comparator less                                : 1
  11-bit comparator lessequal                           : 4
@@ -523,23 +546,18 @@ Macro Statistics
  12-bit comparator lessequal                           : 2
  16-bit comparator greatequal                          : 3
  16-bit comparator less                                : 1
+ 17-bit comparator greater                             : 2
+ 19-bit comparator greatequal                          : 2
+ 19-bit comparator less                                : 1
  32-bit comparator greatequal                          : 1
  32-bit comparator less                                : 9
+ 32-bit comparator lessequal                           : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <pos_x_0> (without init value) has a constant value of 0 in block <Ducks_Drawer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pos_x_1> (without init value) has a constant value of 0 in block <Ducks_Drawer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pos_x_2> (without init value) has a constant value of 0 in block <Ducks_Drawer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pos_x_3> (without init value) has a constant value of 0 in block <Ducks_Drawer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pos_x_4> (without init value) has a constant value of 0 in block <Ducks_Drawer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pos_x_5> (without init value) has a constant value of 0 in block <Ducks_Drawer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pos_x_6> (without init value) has a constant value of 0 in block <Ducks_Drawer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pos_x_8> (without init value) has a constant value of 0 in block <Ducks_Drawer>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pos_x_10> (without init value) has a constant value of 0 in block <Ducks_Drawer>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:1901 - Instance vga_clock_dcm in unit Main of type DCM has been replaced by DCM_SP
 
 Optimizing unit <Main> ...
@@ -557,11 +575,11 @@ Optimizing unit <Control_Drawer> ...
 Optimizing unit <VGA_LOGIC> ...
 
 Optimizing unit <Ducks_Drawer> ...
+WARNING:Xst:1710 - FF/Latch <offset_y_0> (without init value) has a constant value of 1 in block <Ducks_Drawer>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <DD/pos_x_9> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DD/pos_x_7> 
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 15.
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 18.
 FlipFlop DD/address_0 has been replicated 2 time(s)
 FlipFlop DD/address_1 has been replicated 2 time(s)
 FlipFlop DD/address_2 has been replicated 1 time(s)
@@ -573,8 +591,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 220
- Flip-Flops                                            : 220
+# Registers                                            : 280
+ Flip-Flops                                            : 280
 
 =========================================================================
 
@@ -603,33 +621,34 @@ Design Statistics
 # IOs                              : 21
 
 Cell Usage :
-# BELS                             : 2472
+# BELS                             : 3017
 #      GND                         : 1
-#      INV                         : 317
-#      LUT1                        : 205
-#      LUT2                        : 279
-#      LUT2_D                      : 6
+#      INV                         : 284
+#      LUT1                        : 272
+#      LUT2                        : 395
+#      LUT2_D                      : 3
 #      LUT2_L                      : 2
-#      LUT3                        : 157
-#      LUT3_D                      : 2
+#      LUT3                        : 172
+#      LUT3_D                      : 14
 #      LUT3_L                      : 5
-#      LUT4                        : 275
-#      LUT4_D                      : 8
-#      LUT4_L                      : 7
-#      MULT_AND                    : 1
-#      MUXCY                       : 764
-#      MUXF5                       : 120
-#      MUXF6                       : 26
-#      MUXF7                       : 1
+#      LUT4                        : 346
+#      LUT4_D                      : 11
+#      LUT4_L                      : 14
+#      MULT_AND                    : 11
+#      MUXCY                       : 944
+#      MUXF5                       : 104
+#      MUXF6                       : 23
+#      MUXF7                       : 4
 #      VCC                         : 1
-#      XORCY                       : 295
-# FlipFlops/Latches                : 220
+#      XORCY                       : 411
+# FlipFlops/Latches                : 280
 #      FD                          : 11
 #      FDE                         : 112
-#      FDR                         : 60
-#      FDRE                        : 35
+#      FDR                         : 108
+#      FDRE                        : 38
 #      FDRS                        : 1
-#      FDS                         : 1
+#      FDRSE                       : 1
+#      FDS                         : 9
 # Clock Buffers                    : 1
 #      BUFG                        : 1
 # IO Buffers                       : 21
@@ -645,9 +664,9 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                      679  out of   4656    14%  
- Number of Slice Flip Flops:            220  out of   9312     2%  
- Number of 4 input LUTs:               1263  out of   9312    13%  
+ Number of Slices:                      802  out of   4656    17%  
+ Number of Slice Flip Flops:            280  out of   9312     3%  
+ Number of 4 input LUTs:               1518  out of   9312    16%  
  Number of IOs:                          21
  Number of bonded IOBs:                  21  out of    190    11%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -674,7 +693,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk50mhz                           | vga_clock_dcm:CLKFX    | 213   |
+clk50mhz                           | vga_clock_dcm:CLKFX    | 273   |
 clk50mhz                           | IBUFG                  | 7     |
 -----------------------------------+------------------------+-------+
 
@@ -686,8 +705,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 8.213ns (Maximum Frequency: 121.754MHz)
-   Minimum input arrival time before clock: 6.398ns
+   Minimum period: 8.454ns (Maximum Frequency: 118.281MHz)
+   Minimum input arrival time before clock: 5.056ns
    Maximum output required time after clock: 4.182ns
    Maximum combinational path delay: No path found
 
@@ -697,54 +716,54 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50mhz'
-  Clock period: 8.213ns (frequency: 121.754MHz)
-  Total number of paths / destination ports: 43436 / 435
+  Clock period: 8.454ns (frequency: 118.281MHz)
+  Total number of paths / destination ports: 3281085 / 535
 -------------------------------------------------------------------------
-Delay:               8.213ns (Levels of Logic = 8)
-  Source:            DD/address_3 (FF)
+Delay:               8.454ns (Levels of Logic = 9)
+  Source:            DD/address_4 (FF)
   Destination:       CD/data_3 (FF)
   Source Clock:      clk50mhz rising 0.5X
   Destination Clock: clk50mhz rising
 
-  Data Path: DD/address_3 to CD/data_3
+  Data Path: DD/address_4 to CD/data_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q           127   0.514   1.250  DD/address_3 (DD/address_3)
-     LUT4:I0->O            1   0.612   0.387  DD/rom/Mrom_data1161 (DD/rom/Mrom_data116)
-     LUT3:I2->O            2   0.612   0.383  DD/rom/Mrom_data1651_162 (DD/rom/Mrom_data1112_181)
-     LUT4:I3->O            2   0.612   0.410  DD/rom/Mrom_data1651_15_f51 (DD/rom/Mrom_data1651_15_f5)
-     LUT3:I2->O            1   0.612   0.000  DD/rom/Mrom_data1651_9_f5_0_F (N114)
-     MUXF5:I0->O           1   0.278   0.387  DD/rom/Mrom_data1651_9_f5_0 (DD/rom/Mrom_data1651_9_f51)
-     LUT3:I2->O            1   0.612   0.000  DD/rom/Mrom_data1651_4_f5_F (N124)
-     MUXF5:I0->O           1   0.278   0.357  DD/rom/Mrom_data1651_4_f5 (DD/rom/Mrom_data1651_4_f5)
-     MUXF5:S->O            1   0.641   0.000  CD/data_mux0000<3>1 (CD/data_mux0000<3>)
+     FDRE:C->Q           165   0.514   1.112  DD/address_4 (DD/address_4)
+     LUT4:I3->O            1   0.612   0.426  DD/rom/Mrom_data1101_152_SW0 (N90)
+     LUT3:I1->O            2   0.612   0.383  DD/rom/Mrom_data1101_152 (DD/rom/Mrom_data1101_152)
+     LUT4:I3->O            2   0.612   0.410  DD/rom/Mrom_data1641_15_f51 (DD/rom/Mrom_data1101_14_f5)
+     LUT3:I2->O            1   0.612   0.000  DD/rom/Mrom_data1641_9_f5_F (N147)
+     MUXF5:I0->O           1   0.278   0.387  DD/rom/Mrom_data1641_9_f5 (DD/rom/Mrom_data1641_9_f5)
+     LUT3:I2->O            1   0.612   0.000  DD/rom/Mrom_data1641_5_f5_G (N158)
+     MUXF5:I1->O           2   0.278   0.449  DD/rom/Mrom_data1641_5_f5 (DD/rom/Mrom_data1641_5_f5)
+     LUT4:I1->O            1   0.612   0.000  CD/data_mux0000<3>_F (N211)
+     MUXF5:I0->O           1   0.278   0.000  CD/data_mux0000<3> (CD/data_mux0000<3>)
      FDE:D                     0.268          CD/data_3
     ----------------------------------------
-    Total                      8.213ns (5.039ns logic, 3.174ns route)
-                                       (61.4% logic, 38.6% route)
+    Total                      8.454ns (5.288ns logic, 3.166ns route)
+                                       (62.5% logic, 37.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50mhz'
-  Total number of paths / destination ports: 170 / 104
+  Total number of paths / destination ports: 230 / 164
 -------------------------------------------------------------------------
-Offset:              6.398ns (Levels of Logic = 4)
+Offset:              5.056ns (Levels of Logic = 3)
   Source:            reset (PAD)
-  Destination:       DD/draw (FF)
+  Destination:       BD8/draw (FF)
   Destination Clock: clk50mhz rising 0.5X
 
-  Data Path: reset to DD/draw
+  Data Path: reset to BD8/draw
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            28   1.106   1.224  reset_IBUF (reset_IBUF)
-     LUT3:I0->O           18   0.612   0.911  DD/address_or000015 (DD/address_or0000)
-     LUT4_L:I3->LO         1   0.612   0.169  DD/draw_or000036 (DD/draw_or000036)
-     LUT2:I1->O            1   0.612   0.357  DD/draw_or000046 (DD/draw_or0000)
-     FDR:R                     0.795          DD/draw
+     IBUF:I->O            56   1.106   1.148  reset_IBUF (reset_IBUF)
+     LUT2:I1->O            1   0.612   0.426  BD8/draw_or0000_SW1 (N177)
+     LUT4:I1->O            1   0.612   0.357  BD8/draw_or0000 (BD8/draw_or0000)
+     FDR:R                     0.795          BD8/draw
     ----------------------------------------
-    Total                      6.398ns (3.737ns logic, 2.661ns route)
-                                       (58.4% logic, 41.6% route)
+    Total                      5.056ns (3.125ns logic, 1.931ns route)
+                                       (61.8% logic, 38.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50mhz'
@@ -768,14 +787,14 @@ Offset:              4.182ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.49 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.32 secs
  
 --> 
 
-Total memory usage is 218368 kilobytes
+Total memory usage is 219520 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   30 (   0 filtered)
-Number of infos    :   14 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
 

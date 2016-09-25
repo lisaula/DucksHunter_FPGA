@@ -18,10 +18,14 @@ module Ducks_Drawer(
 	wire signed [11:0]sHcount  = {3'b000,hcount};
 	wire signed [9:0]sVcount = {3'b0,vcount};
 	reg [4:0]cont;
-	
+	reg shouldStop;
 	parameter 
 		counterY_limit = 260000,
-		counterX_limit =  60000;
+		counterX_limit =  60000,
+		shouldIntercalate=0,
+		initial_posY= 10'sd150,
+		initial_posX=11'sd594,
+		uPOrDown=1;
 	
 	always @(posedge clk)
 	begin
@@ -31,17 +35,28 @@ module Ducks_Drawer(
 		if(contadorY >= counterY_limit) begin
 			contadorY = 0;
 			cont = cont +1;
-			if(cont == 30)begin
-				offset_y = -1*offset_y;
-				cont = 0;
+			if(shouldIntercalate) begin
+				if(cont == 30)begin
+					offset_y = -1*offset_y;
+					cont = 0;
+				end
 			end
-			//pos_y = pos_y+offset_y;
+			if(shouldStop)begin
+				offset_y = -1*offset_y;
+				shouldStop=0;
+			end
+			pos_y = pos_y+offset_y;
+		end
+		
+		if(pos_y>= 10'sd200 ||pos_y<= -10'sd40)begin//compare if the ducks has not gone too low
+			//offset_y = -1*offset_y;
+			shouldStop=1;
 		end
 		
 		contadorX = contadorX +1;
 		if(contadorX > counterX_limit)begin
 			contadorX=0;
-			//pos_x = pos_x-1;
+			pos_x = pos_x-1;
 		end
 		if(pos_x<-11'sd46 || collision) begin
 			pos_x = 11'sd640;
@@ -62,12 +77,13 @@ module Ducks_Drawer(
 		if(reset)begin
 			address=0;
 			draw = 0;
-			pos_x = 11'sd0;//594
-			pos_y =10'sd0;//150
+			pos_x = initial_posX;
+			pos_y =initial_posY;
 			offset_y=1;
 			contadorY=0;
 			contadorX=0;
 			cont =0;
+			shouldStop=0;
 		end
 	end
 
