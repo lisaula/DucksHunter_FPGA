@@ -1,16 +1,19 @@
-unsigned char btnIzquierda=13,btnDerecha=12,btnDisparo=11, btnReset=22;
-unsigned char pinIzquierda=10,pinDerecha=9,pinDisparo=8, pinReset=23;
-unsigned char pinesPatosMatados[] = {7,6,5,4,3,2};
+unsigned char btnIzquierda=26,btnDerecha=23,btnDisparo=25, btnReset=22,btnReload=24;
+unsigned char pinIzquierda=13,pinDerecha=12,pinDisparo=11, pinReset=10,pinReload=9,pinGameDone=8;
+unsigned char pinesPatosMatados[] = {35,34,33,32,31,30,29,28};
 
 int patosMatados;
 int balas,timeout,tiempo;
-int disparando,reset;
+int disparando,reset, reload,score;
 
 bool puedeDisparar();
 void disparar();
 bool btnPresionado(unsigned char btn, int *estadoBtn);
 int readFromPins(unsigned char *pins, int size);
 void resetGame();
+void reloadGun();
+void readScore();
+void pintScore();
 
 void setup() {
   Serial.begin(9600);
@@ -22,26 +25,51 @@ void setup() {
   pinMode(pinDerecha,OUTPUT);
   pinMode(pinDisparo,OUTPUT);
   pinMode(pinReset,OUTPUT);
+  pinMode(pinReload,OUTPUT);
+  
+  pinMode(pinGameDone,INPUT);
 
   pinMode(btnIzquierda,INPUT);
   pinMode(btnDerecha,INPUT);
   pinMode(btnDisparo,INPUT);
   pinMode(btnReset,INPUT);
+  pinMode(btnReload,INPUT);
+
+  for(int i=0; i<8; i++)
+  {
+    pinMode(pinesPatosMatados[i],INPUT);
+  }
 
   resetGame();
 }
 
 void loop() {
-  digitalWrite(pinIzquierda,digitalRead(btnIzquierda));
-  digitalWrite(pinDerecha,digitalRead(btnDerecha));
-  
-  if(btnPresionado(btnDisparo,&disparando))
+  if(!digitalRead(pinGameDone))
   {
-    disparar();
-    Serial.print("Balas: ");
-    Serial.println(balas);
+    digitalWrite(pinIzquierda,digitalRead(btnIzquierda));
+    digitalWrite(pinDerecha,digitalRead(btnDerecha));
+    
+    if(btnPresionado(btnDisparo,&disparando))
+    {
+      disparar();
+      Serial.print("Balas: ");
+      Serial.println(balas);
+    }else{
+      digitalWrite(pinDisparo,LOW);
+    }
+  
+    if(btnPresionado(btnReload,&reload))
+    {
+      balas=4;
+      digitalWrite(pinReload,HIGH);
+    }else{
+      digitalWrite(pinReload,LOW);
+    }
   }else{
-    digitalWrite(pinDisparo,LOW);
+    if(btnPresionado(pinGameDone,&score))
+    {
+      printScore();
+    }
   }
 
   if(btnPresionado(btnReset,&reset))
@@ -85,10 +113,11 @@ void disparar()
 
 void resetGame()
 {
-  balas=20;
+  balas=4;
   tiempo=30;
   
   disparando=0;
+  score=0;
 
   digitalWrite(pinReset,HIGH);
   delay(timeout);
@@ -104,10 +133,19 @@ void resetGame()
 
 int readFromPins(unsigned char *pins, int size)
 {
-  int dato=0;
+  unsigned char dato=0;
   for(int i = 0; i<size; i++){
     dato |= (digitalRead(pins[i])<<(size-i));
   }
 
   return dato;
 }
+
+void printScore()
+{
+  //delay(timeout*3);
+  int mi_score = readFromPins(pinesPatosMatados,8);
+  Serial.print("Score: ");
+  Serial.println(mi_score);
+}
+
