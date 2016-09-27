@@ -11,8 +11,9 @@ module TB_main(
    wire [1:0]blue_out;
 	wire hsync;
 	wire vsync;
-	
-	Main main(clk, reset, izq, der,fire,red_out,green_out, blue_out,hsync,vsync);
+	wire [7:0]led;
+	reg reload;
+	Main main(clk, reset, izq, der,fire,reload,red_out,green_out, blue_out,hsync,vsync, led);
 	
 	initial 
 	begin
@@ -29,6 +30,18 @@ module TB_main(
 		izq =1;
 		#60;
 		izq = 0;
+		#20;
+		fire = 1;
+		#60;
+		fire = 0;
+		#20;
+		fire = 1;
+		#20;
+		fire = 0;
+		#20;
+		fire = 1;
+		#20;
+		fire = 0;
 		
 		
 	end

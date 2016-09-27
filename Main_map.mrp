@@ -9,36 +9,36 @@ Target Device  : xc3s500e
 Target Package : ft256
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Sep 21 04:03:44 2016
+Mapped Date    : Mon Sep 26 21:44:22 2016
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    5
+Number of warnings:   33
 Logic Utilization:
-  Number of Slice Flip Flops:            89 out of   9,312    1%
-  Number of 4 input LUTs:               650 out of   9,312    6%
+  Number of Slice Flip Flops:           696 out of   9,312    7%
+  Number of 4 input LUTs:             3,416 out of   9,312   36%
 Logic Distribution:
-  Number of occupied Slices:            414 out of   4,656    8%
-    Number of Slices containing only related logic:     414 out of     414 100%
-    Number of Slices containing unrelated logic:          0 out of     414   0%
+  Number of occupied Slices:          2,258 out of   4,656   48%
+    Number of Slices containing only related logic:   2,258 out of   2,258 100%
+    Number of Slices containing unrelated logic:          0 out of   2,258   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         725 out of   9,312    7%
-    Number used as logic:               650
-    Number used as a route-thru:         75
+  Total Number of 4 input LUTs:       4,199 out of   9,312   45%
+    Number used as logic:             3,416
+    Number used as a route-thru:        783
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 13 out of     190    6%
-  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of bonded IOBs:                 27 out of     190   14%
+  Number of BUFGMUXs:                     3 out of      24   12%
   Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                4.25
+Average Fanout of Non-Clock Nets:                3.43
 
-Peak Memory Usage:  208 MB
-Total REAL time to MAP completion:  1 secs 
-Total CPU time to MAP completion:   1 secs 
+Peak Memory Usage:  224 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   3 secs 
 
 NOTES:
 
@@ -79,24 +79,108 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data2791_17 failed to
-   merge with F5 multiplexer DD/rom/Mrom_data2391_14_f5_0.  There is a conflict
+WARNING:Pack:266 - The function generator DD3/rom/Mrom_data1651_153 failed to
+   merge with F5 multiplexer DD3/rom/Mrom_data481_16_f5.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data2791_181 failed to
-   merge with F5 multiplexer DD/rom/Mrom_data2391_15_f5_2.  There is a conflict
+WARNING:Pack:266 - The function generator DD2/rom/Mrom_data1112_142 failed to
+   merge with F5 multiplexer DD2/rom/Mrom_data481_13_f5_1.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data1421_173 failed to
-   merge with F5 multiplexer DD/rom/Mrom_data521_20_f5.  There is a conflict for
+WARNING:Pack:266 - The function generator DD2/rom/Mrom_data1112_152 failed to
+   merge with F5 multiplexer DD2/rom/Mrom_data481_14_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD2/rom/Mrom_data2631_15 failed to
+   merge with F5 multiplexer DD2/rom/Mrom_data2131_14_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD3/rom/Mrom_data1112_142 failed to
+   merge with F5 multiplexer DD3/rom/Mrom_data481_13_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD3/rom/Mrom_data1651_123 failed to
+   merge with F5 multiplexer DD3/rom/Mrom_data481_14_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD3/rom/Mrom_data1112_7 failed to
+   merge with F5 multiplexer DD3/rom/Mrom_data481_6_f5.  There is a conflict for
    the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator DD/rom/Mrom_data1951_135 failed to
-   merge with F5 multiplexer DD/rom/Mrom_data1951_12_f5_3.  There is a conflict
+WARNING:Pack:266 - The function generator DD4/rom/Mrom_data2631_15 failed to
+   merge with F5 multiplexer DD4/rom/Mrom_data2131_14_f5.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:PhysDesignRules:367 - The signal <fire_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_15 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2131_14_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD4/rom/Mrom_data1112_142 failed to
+   merge with F5 multiplexer DD4/rom/Mrom_data481_13_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data1112_142 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data481_13_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD4/rom/Mrom_data1651_123 failed to
+   merge with F5 multiplexer DD4/rom/Mrom_data481_14_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data1112_152 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data481_14_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD4/rom/Mrom_data1651_153 failed to
+   merge with F5 multiplexer DD4/rom/Mrom_data481_16_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD2/rom/Mrom_data2631_133 failed to
+   merge with F5 multiplexer DD2/rom/Mrom_data2131_12_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD2/rom/Mrom_data2631_135 failed to
+   merge with F5 multiplexer DD2/rom/Mrom_data2131_12_f5_3.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD2/rom/Mrom_data2631_136 failed to
+   merge with F5 multiplexer DD2/rom/Mrom_data2131_12_f5_4.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD2/rom/Mrom_data2631_153 failed to
+   merge with F5 multiplexer DD2/rom/Mrom_data2131_14_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data1112_17 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data481_16_f5.  There is a conflict for
+   the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD3/rom/Mrom_data2631_133 failed to
+   merge with F5 multiplexer DD3/rom/Mrom_data2131_12_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD3/rom/Mrom_data2631_135 failed to
+   merge with F5 multiplexer DD3/rom/Mrom_data2131_12_f5_3.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD3/rom/Mrom_data2631_136 failed to
+   merge with F5 multiplexer DD3/rom/Mrom_data2131_12_f5_4.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD3/rom/Mrom_data2631_153 failed to
+   merge with F5 multiplexer DD3/rom/Mrom_data2131_14_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD3/rom/Mrom_data2631_15 failed to
+   merge with F5 multiplexer DD3/rom/Mrom_data2131_14_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD2/rom/Mrom_data1112_17 failed to
+   merge with F5 multiplexer DD2/rom/Mrom_data481_16_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD4/rom/Mrom_data2631_133 failed to
+   merge with F5 multiplexer DD4/rom/Mrom_data2131_12_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_133 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2131_12_f5_1.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD4/rom/Mrom_data2631_135 failed to
+   merge with F5 multiplexer DD4/rom/Mrom_data2131_12_f5_3.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_135 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2131_12_f5_3.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD4/rom/Mrom_data2631_136 failed to
+   merge with F5 multiplexer DD4/rom/Mrom_data2131_12_f5_4.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_136 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2131_12_f5_4.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD4/rom/Mrom_data2631_153 failed to
+   merge with F5 multiplexer DD4/rom/Mrom_data2131_14_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator DD/rom/Mrom_data2631_153 failed to
+   merge with F5 multiplexer DD/rom/Mrom_data2131_14_f5_0.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network fire_IBUF has no load.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
    with the CLKFX and CLKFX180 outputs of the DCM comp vga_clock_dcm, consult
@@ -127,15 +211,29 @@ Section 6 - IOB Properties
 | blue_out<0>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
 | blue_out<1>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
 | clk50mhz                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| data_sound<0>                      | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| data_sound<1>                      | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| data_sound<2>                      | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| data_sound<3>                      | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
 | der                                | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | fire                               | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | green_out<0>                       | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
 | green_out<1>                       | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
 | hsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
 | izq                                | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| led<4>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| led<5>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| led<6>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| led<7>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
 | red_out<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
 | red_out<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
+| reload                             | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | reset                              | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| shouldFinish                       | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
 | vsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
