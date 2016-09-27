@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: Main.prj
 
@@ -107,8 +107,10 @@ Slice Utilization Ratio Delta      : 5
 Compiling verilog file "Ducks_Rom.v" in library work
 Compiling verilog file "VGA_LOGIC.v" in library work
 Module <Ducks_Rom> compiled
-Compiling verilog file "Shot_Builder.v" in library work
+Compiling verilog file "SineWave.v" in library work
 Module <VGA_LOGIC> compiled
+Compiling verilog file "Shot_Builder.v" in library work
+Module <SineWave> compiled
 Compiling verilog file "Gun.v" in library work
 Module <Shot_Builder> compiled
 Compiling verilog file "Ducks_Drawer.v" in library work
@@ -119,8 +121,10 @@ Compiling verilog file "Comparator.v" in library work
 Module <Control_Drawer> compiled
 Compiling verilog file "Collision_Control.v" in library work
 Module <Comparator> compiled
-Compiling verilog file "Bullet_Drawer.v" in library work
+Compiling verilog file "CLK_Divider.v" in library work
 Module <Collision_Control> compiled
+Compiling verilog file "Bullet_Drawer.v" in library work
+Module <CLK_Divider> compiled
 Compiling verilog file "Main.v" in library work
 Module <Bullet_Drawer> compiled
 Module <Main> compiled
@@ -175,14 +179,22 @@ Analyzing hierarchy for module <Collision_Control> in library <work>.
 
 Analyzing hierarchy for module <Comparator> in library <work>.
 
+Analyzing hierarchy for module <CLK_Divider> in library <work> with parameters.
+	counter_limit = "101110101010"
+
+Analyzing hierarchy for module <CLK_Divider> in library <work> with parameters.
+	counter_limit = "011111001001"
+
+Analyzing hierarchy for module <SineWave> in library <work>.
+
 Analyzing hierarchy for module <Control_Drawer> in library <work>.
 
 Analyzing hierarchy for module <VGA_LOGIC> in library <work>.
 
 Analyzing hierarchy for module <Ducks_Rom> in library <work>.
 
-WARNING:Xst:2591 - "Main.v" line 27: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "Main.v" line 27: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "Main.v" line 28: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "Main.v" line 28: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -262,6 +274,17 @@ Module <Collision_Control> is correct for synthesis.
  
 Analyzing module <Comparator> in library <work>.
 Module <Comparator> is correct for synthesis.
+ 
+Analyzing module <CLK_Divider.1> in library <work>.
+	counter_limit = 12'b101110101010
+Module <CLK_Divider.1> is correct for synthesis.
+ 
+Analyzing module <CLK_Divider.2> in library <work>.
+	counter_limit = 12'b011111001001
+Module <CLK_Divider.2> is correct for synthesis.
+ 
+Analyzing module <SineWave> in library <work>.
+Module <SineWave> is correct for synthesis.
  
 Analyzing module <Control_Drawer> in library <work>.
 Module <Control_Drawer> is correct for synthesis.
@@ -457,6 +480,38 @@ Synthesizing Unit <Comparator>.
 Unit <Comparator> synthesized.
 
 
+Synthesizing Unit <CLK_Divider_1>.
+    Related source file is "CLK_Divider.v".
+    Found 1-bit register for signal <clk1hz_buff>.
+    Found 22-bit up counter for signal <counter>.
+    Found 22-bit adder for signal <old_counter_40$add0000> created at line 18.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <CLK_Divider_1> synthesized.
+
+
+Synthesizing Unit <CLK_Divider_2>.
+    Related source file is "CLK_Divider.v".
+    Found 1-bit register for signal <clk1hz_buff>.
+    Found 22-bit up counter for signal <counter>.
+    Found 22-bit adder for signal <old_counter_41$add0000> created at line 18.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <CLK_Divider_2> synthesized.
+
+
+Synthesizing Unit <SineWave>.
+    Related source file is "SineWave.v".
+    Found 32x4-bit ROM for signal <data>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <SineWave> synthesized.
+
+
 Synthesizing Unit <Control_Drawer>.
     Related source file is "Control_Drawer.v".
     Found 1-bit register for signal <draw>.
@@ -480,8 +535,8 @@ WARNING:Xst:1780 - Signal <contColumn> is never used or assigned. This unconnect
     Found 10-bit register for signal <hcount>.
     Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 42.
     Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 42.
-    Found 10-bit adder for signal <old_hcount_41$addsub0000> created at line 33.
-    Found 10-bit adder for signal <old_vcount_40$addsub0000> created at line 30.
+    Found 10-bit adder for signal <old_hcount_43$addsub0000> created at line 33.
+    Found 10-bit adder for signal <old_vcount_42$addsub0000> created at line 30.
     Found 10-bit comparator less for signal <red_out$cmp_lt0000> created at line 48.
     Found 10-bit comparator less for signal <red_out$cmp_lt0001> created at line 48.
     Found 10-bit register for signal <vcount>.
@@ -670,22 +725,25 @@ Unit <Ducks_Drawer_4> synthesized.
 Synthesizing Unit <Main>.
     Related source file is "Main.v".
 WARNING:Xst:1780 - Signal <shot_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <divider> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <contador_led> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 8-bit up counter for signal <led>.
+    Found 5-bit up counter for signal <address_sineWave>.
     Found 3-bit register for signal <bullet_counter>.
-    Found 3-bit subtractor for signal <bullet_counter$addsub0000> created at line 203.
-    Found 3-bit comparator greater for signal <bullet_counter$cmp_gt0000> created at line 202.
+    Found 3-bit subtractor for signal <bullet_counter$addsub0000> created at line 232.
+    Found 3-bit comparator greater for signal <bullet_counter$cmp_gt0000> created at line 231.
     Found 25-bit up counter for signal <contador>.
-    Found 25-bit comparator greatequal for signal <contador$cmp_ge0000> created at line 188.
+    Found 25-bit comparator greatequal for signal <contador$cmp_ge0000> created at line 217.
     Found 1-bit register for signal <fired>.
     Found 1-bit register for signal <hasCollisioned>.
-    Found 25-bit adder for signal <old_contador_2$add0000> created at line 187.
+    Found 25-bit adder for signal <old_contador_2$add0000> created at line 216.
     Found 5-bit up counter for signal <segs>.
-    Found 5-bit comparator greatequal for signal <segs$cmp_ge0000> created at line 189.
-    Found 25-bit comparator less for signal <segs$cmp_lt0000> created at line 188.
+    Found 5-bit comparator greatequal for signal <segs$cmp_ge0000> created at line 218.
+    Found 25-bit comparator less for signal <segs$cmp_lt0000> created at line 217.
+    Found 1-bit register for signal <temp>.
     Summary:
-	inferred   3 Counter(s).
-	inferred   5 D-type flip-flop(s).
+	inferred   4 Counter(s).
+	inferred   6 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 	inferred   4 Comparator(s).
 Unit <Main> synthesized.
@@ -695,9 +753,10 @@ Unit <Main> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 4
+# ROMs                                                 : 5
  2048x6-bit ROM                                        : 4
-# Adders/Subtractors                                   : 92
+ 32x4-bit ROM                                          : 1
+# Adders/Subtractors                                   : 94
  10-bit adder                                          : 7
  10-bit adder carry out                                : 19
  10-bit subtractor                                     : 8
@@ -707,22 +766,24 @@ Macro Statistics
  16-bit adder                                          : 2
  17-bit adder                                          : 4
  18-bit adder                                          : 4
+ 22-bit adder                                          : 2
  25-bit adder                                          : 1
  3-bit adder                                           : 2
  3-bit subtractor                                      : 1
  5-bit adder                                           : 8
-# Counters                                             : 23
+# Counters                                             : 26
  10-bit updown counter                                 : 1
  11-bit up counter                                     : 4
  16-bit up counter                                     : 2
  17-bit up counter                                     : 4
  18-bit up counter                                     : 4
+ 22-bit up counter                                     : 2
  25-bit up counter                                     : 1
  3-bit up counter                                      : 3
- 5-bit up counter                                      : 3
+ 5-bit up counter                                      : 4
  8-bit up counter                                      : 1
-# Registers                                            : 74
- 1-bit register                                        : 33
+# Registers                                            : 77
+ 1-bit register                                        : 36
  10-bit register                                       : 24
  11-bit register                                       : 5
  2-bit register                                        : 3
@@ -790,9 +851,10 @@ Unit <Ducks_Drawer_4> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 4
+# ROMs                                                 : 5
  2048x6-bit ROM                                        : 4
-# Adders/Subtractors                                   : 92
+ 32x4-bit ROM                                          : 1
+# Adders/Subtractors                                   : 94
  10-bit adder                                          : 7
  10-bit adder carry out                                : 19
  10-bit subtractor                                     : 8
@@ -802,24 +864,26 @@ Macro Statistics
  16-bit adder                                          : 2
  17-bit adder                                          : 4
  18-bit adder                                          : 4
+ 22-bit adder                                          : 2
  25-bit adder                                          : 1
  3-bit adder                                           : 2
  3-bit subtractor                                      : 1
  5-bit adder                                           : 8
-# Counters                                             : 23
+# Counters                                             : 26
  10-bit updown counter                                 : 1
  11-bit up counter                                     : 4
  16-bit up counter                                     : 2
  17-bit up counter                                     : 4
  18-bit up counter                                     : 4
+ 22-bit up counter                                     : 2
  25-bit up counter                                     : 1
  3-bit up counter                                      : 3
- 5-bit up counter                                      : 3
+ 5-bit up counter                                      : 4
  8-bit up counter                                      : 1
 # Accumulators                                         : 4
  10-bit up loadable accumulator                        : 4
-# Registers                                            : 337
- Flip-Flops                                            : 337
+# Registers                                            : 340
+ Flip-Flops                                            : 340
 # Comparators                                          : 196
  10-bit comparator greatequal                          : 14
  10-bit comparator greater                             : 3
@@ -900,7 +964,7 @@ WARNING:Xst:2677 - Node <SB/fin> of sequential type is unconnected in block <Mai
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 51.
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 52.
 
 Final Macro Processing ...
 
@@ -908,8 +972,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 644
- Flip-Flops                                            : 644
+# Registers                                            : 696
+ Flip-Flops                                            : 696
 
 =========================================================================
 
@@ -935,44 +999,44 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 23
+# IOs                              : 27
 
 Cell Usage :
-# BELS                             : 7661
+# BELS                             : 7969
 #      GND                         : 1
-#      INV                         : 291
-#      LUT1                        : 646
-#      LUT2                        : 945
+#      INV                         : 299
+#      LUT1                        : 730
+#      LUT2                        : 948
 #      LUT2_D                      : 2
-#      LUT2_L                      : 5
-#      LUT3                        : 886
+#      LUT2_L                      : 6
+#      LUT3                        : 888
 #      LUT3_D                      : 41
 #      LUT3_L                      : 3
-#      LUT4                        : 1171
-#      LUT4_D                      : 12
-#      LUT4_L                      : 9
+#      LUT4                        : 1190
+#      LUT4_D                      : 13
+#      LUT4_L                      : 10
 #      MULT_AND                    : 40
-#      MUXCY                       : 2029
-#      MUXF5                       : 495
+#      MUXCY                       : 2125
+#      MUXF5                       : 500
 #      MUXF6                       : 137
 #      MUXF7                       : 12
 #      VCC                         : 1
-#      XORCY                       : 935
-# FlipFlops/Latches                : 644
+#      XORCY                       : 1023
+# FlipFlops/Latches                : 696
 #      FD                          : 31
-#      FDE                         : 183
-#      FDR                         : 280
+#      FDE                         : 185
+#      FDR                         : 329
 #      FDRE                        : 89
 #      FDRS                        : 4
 #      FDRSE                       : 5
-#      FDS                         : 40
+#      FDS                         : 41
 #      FDSE                        : 12
 # Clock Buffers                    : 3
 #      BUFG                        : 3
-# IO Buffers                       : 23
+# IO Buffers                       : 27
 #      IBUF                        : 5
 #      IBUFG                       : 1
-#      OBUF                        : 17
+#      OBUF                        : 21
 # DCMs                             : 1
 #      DCM_SP                      : 1
 =========================================================================
@@ -982,11 +1046,11 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                     2158  out of   4656    46%  
- Number of Slice Flip Flops:            644  out of   9312     6%  
- Number of 4 input LUTs:               4011  out of   9312    43%  
- Number of IOs:                          23
- Number of bonded IOBs:                  23  out of    190    12%  
+ Number of Slices:                     2216  out of   4656    47%  
+ Number of Slice Flip Flops:            696  out of   9312     7%  
+ Number of 4 input LUTs:               4130  out of   9312    44%  
+ Number of IOs:                          27
+ Number of bonded IOBs:                  27  out of    190    14%  
  Number of GCLKs:                         3  out of     24    12%  
  Number of DCMs:                          1  out of      4    25%  
 
@@ -1008,16 +1072,18 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk50mhz                           | vga_clock_dcm:CLKFX    | 77    |
-logicClk1(logicClk11:O)            | BUFG(*)(g/contador_15) | 537   |
-clk50mhz                           | IBUFG+BUFG             | 30    |
------------------------------------+------------------------+-------+
+-----------------------------------+-------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)   | Load  |
+-----------------------------------+-------------------------+-------+
+clk50mhz                           | IBUFG+BUFG              | 77    |
+temp                               | NONE(address_sineWave_0)| 5     |
+clk50mhz                           | vga_clock_dcm:CLKFX     | 77    |
+logicClk1(logicClk11:O)            | BUFG(*)(g/contador_15)  | 537   |
+-----------------------------------+-------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -1028,7 +1094,7 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 16.866ns (Maximum Frequency: 59.292MHz)
-   Minimum input arrival time before clock: 7.790ns
+   Minimum input arrival time before clock: 7.777ns
    Maximum output required time after clock: 6.364ns
    Maximum combinational path delay: No path found
 
@@ -1038,33 +1104,57 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50mhz'
-  Clock period: 12.007ns (frequency: 83.284MHz)
-  Total number of paths / destination ports: 21499 / 164
+  Clock period: 12.490ns (frequency: 80.067MHz)
+  Total number of paths / destination ports: 35730 / 258
 -------------------------------------------------------------------------
-Delay:               12.007ns (Levels of Logic = 9)
-  Source:            CC/bulletPosition_x_5 (FF)
+Delay:               12.490ns (Levels of Logic = 10)
+  Source:            CC/bulletPosition_x_3 (FF)
   Destination:       hasCollisioned (FF)
   Source Clock:      clk50mhz rising
   Destination Clock: clk50mhz rising 0.5X
 
-  Data Path: CC/bulletPosition_x_5 to hasCollisioned
+  Data Path: CC/bulletPosition_x_3 to hasCollisioned
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              22   0.514   1.141  CC/bulletPosition_x_5 (CC/bulletPosition_x_5)
-     LUT3_D:I0->LO         1   0.612   0.103  C4/Madd__add0000_xor<6>111 (N440)
-     LUT4:I3->O           16   0.612   1.031  C4/Madd__add0000_xor<9>111 (C4/N2)
-     LUT2:I0->O            0   0.612   0.000  C3/Madd__add0000_xor<10>11 (C3/_add0000<10>)
-     MUXCY:DI->O           1   0.773   0.000  C3/Mcompar_collision_cmp_le0000_cy<10> (C3/Mcompar_collision_cmp_le0000_cy<10>)
+     FD:C->Q              38   0.514   1.226  CC/bulletPosition_x_3 (CC/bulletPosition_x_3)
+     LUT3_D:I0->O          9   0.612   0.766  C4/Madd__add0000_xor<6>111 (C4/N7)
+     LUT4_D:I1->O         15   0.612   0.933  C4/Madd__add0000_xor<9>111 (C4/N2)
+     LUT2:I1->O            0   0.612   0.000  C3/Madd__add0000_xor<9>12 (C3/_add0000<9>)
+     MUXCY:DI->O           1   0.773   0.000  C3/Mcompar_collision_cmp_le0000_cy<9> (C3/Mcompar_collision_cmp_le0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  C3/Mcompar_collision_cmp_le0000_cy<10> (C3/Mcompar_collision_cmp_le0000_cy<10>)
      MUXCY:CI->O           1   0.399   0.426  C3/Mcompar_collision_cmp_le0000_cy<11> (C3/collision_cmp_le0000)
      LUT4:I1->O            1   0.612   0.426  C3/collision10 (C3/collision10)
-     LUT4_D:I1->O         19   0.612   0.991  C3/collision13 (collision3)
-     LUT4:I1->O            9   0.612   0.766  hasCollisioned_or00001 (led_and0000)
-     LUT2:I1->O            1   0.612   0.357  hasCollisioned_or00002 (hasCollisioned_or0000)
+     LUT4_D:I1->O         20   0.612   1.089  C3/collision13 (collision3)
+     LUT4_D:I0->O          2   0.612   0.449  temp_mux000022 (N8)
+     LUT3:I1->O            1   0.612   0.357  hasCollisioned_or00001 (hasCollisioned_or0000)
      FDRS:R                    0.795          hasCollisioned
     ----------------------------------------
-    Total                     12.007ns (6.766ns logic, 5.242ns route)
-                                       (56.3% logic, 43.7% route)
+    Total                     12.490ns (6.817ns logic, 5.673ns route)
+                                       (54.6% logic, 45.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'temp'
+  Clock period: 2.641ns (frequency: 378.666MHz)
+  Total number of paths / destination ports: 19 / 5
+-------------------------------------------------------------------------
+Delay:               2.641ns (Levels of Logic = 2)
+  Source:            address_sineWave_0 (FF)
+  Destination:       address_sineWave_4 (FF)
+  Source Clock:      temp rising
+  Destination Clock: temp rising
+
+  Data Path: address_sineWave_0 to address_sineWave_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.514   0.969  address_sineWave_0 (address_sineWave_0)
+     LUT4:I0->O            1   0.612   0.000  Result<4>2 (Result<4>7)
+     MUXF5:I0->O           1   0.278   0.000  Result<4>_f5 (Result<4>)
+     FDR:D                     0.268          address_sineWave_4
+    ----------------------------------------
+    Total                      2.641ns (1.672ns logic, 0.969ns route)
+                                       (63.3% logic, 36.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'logicClk1'
@@ -1131,10 +1221,29 @@ Delay:               16.866ns (Levels of Logic = 43)
                                        (66.6% logic, 33.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50mhz'
-  Total number of paths / destination ports: 59 / 51
+Timing constraint: Default OFFSET IN BEFORE for Clock 'temp'
+  Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
-Offset:              4.848ns (Levels of Logic = 2)
+Offset:              3.014ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       address_sineWave_0 (FF)
+  Destination Clock: temp rising
+
+  Data Path: reset to address_sineWave_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           181   1.106   1.113  reset_IBUF (reset_IBUF)
+     FDR:R                     0.795          address_sineWave_0
+    ----------------------------------------
+    Total                      3.014ns (1.901ns logic, 1.113ns route)
+                                       (63.1% logic, 36.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50mhz'
+  Total number of paths / destination ports: 60 / 52
+-------------------------------------------------------------------------
+Offset:              4.849ns (Levels of Logic = 2)
   Source:            reset (PAD)
   Destination:       contador_0 (FF)
   Destination Clock: clk50mhz rising 0.5X
@@ -1143,35 +1252,35 @@ Offset:              4.848ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           176   1.106   1.264  reset_IBUF (reset_IBUF)
+     IBUF:I->O           181   1.106   1.265  reset_IBUF (reset_IBUF)
      LUT2:I0->O           25   0.612   1.071  contador_or00001 (contador_or0000)
      FDR:R                     0.795          contador_0
     ----------------------------------------
-    Total                      4.848ns (2.513ns logic, 2.335ns route)
+    Total                      4.849ns (2.513ns logic, 2.336ns route)
                                        (51.8% logic, 48.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'logicClk1'
   Total number of paths / destination ports: 605 / 539
 -------------------------------------------------------------------------
-Offset:              7.790ns (Levels of Logic = 5)
+Offset:              7.777ns (Levels of Logic = 5)
   Source:            fire (PAD)
-  Destination:       SB/Y_Positions_1_9 (FF)
+  Destination:       SB/Y_Positions_7_9 (FF)
   Destination Clock: logicClk1 rising
 
-  Data Path: fire to SB/Y_Positions_1_9
+  Data Path: fire to SB/Y_Positions_7_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             8   1.106   0.795  fire_IBUF (fire_IBUF)
+     IBUF:I->O             9   1.106   0.849  fire_IBUF (fire_IBUF)
      LUT4:I0->O            7   0.612   0.754  fire_up1 (fire_up)
-     LUT2:I0->O            5   0.612   0.607  SB/Y_Positions_0_not000121 (SB/instantiate_and0000)
-     LUT4:I1->O           12   0.612   0.847  SB/X_Positions_1_and00001 (SB/X_Positions_1_and0000)
-     LUT3:I2->O           10   0.612   0.750  SB/Y_Positions_1_not00011 (SB/Y_Positions_1_not0001)
-     FDE:CE                    0.483          SB/Y_Positions_1_0
+     LUT2:I0->O            5   0.612   0.541  SB/Y_Positions_0_not000121 (SB/instantiate_and0000)
+     LUT4:I3->O           12   0.612   0.847  SB/X_Positions_7_and00001 (SB/X_Positions_7_and0000)
+     LUT3:I2->O           10   0.612   0.750  SB/Y_Positions_7_not00011 (SB/Y_Positions_7_not0001)
+     FDE:CE                    0.483          SB/Y_Positions_7_0
     ----------------------------------------
-    Total                      7.790ns (4.037ns logic, 3.753ns route)
-                                       (51.8% logic, 48.2% route)
+    Total                      7.777ns (4.037ns logic, 3.740ns route)
+                                       (51.9% logic, 48.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50mhz'
@@ -1187,7 +1296,7 @@ Offset:              6.364ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             2   0.514   0.532  segs_3 (segs_3)
-     LUT3:I0->O            4   0.612   0.568  Result<4>211 (Result<4>2_bdd0)
+     LUT3:I0->O            4   0.612   0.568  Result<4>511 (Result<4>5_bdd0)
      LUT3:I1->O            1   0.612   0.357  shouldFinish1 (shouldFinish_OBUF)
      OBUF:I->O                 3.169          shouldFinish_OBUF (shouldFinish)
     ----------------------------------------
@@ -1195,16 +1304,37 @@ Offset:              6.364ns (Levels of Logic = 3)
                                        (77.1% logic, 22.9% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp'
+  Total number of paths / destination ports: 28 / 4
+-------------------------------------------------------------------------
+Offset:              5.875ns (Levels of Logic = 3)
+  Source:            address_sineWave_1 (FF)
+  Destination:       data_sound<0> (PAD)
+  Source Clock:      temp rising
+
+  Data Path: address_sineWave_1 to data_sound<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.514   0.945  address_sineWave_1 (address_sineWave_1)
+     LUT4:I0->O            1   0.612   0.000  data_sound<0>1 (data_sound<0>1)
+     MUXF5:I1->O           1   0.278   0.357  data_sound<0>_f5 (data_sound_0_OBUF)
+     OBUF:I->O                 3.169          data_sound_0_OBUF (data_sound<0>)
+    ----------------------------------------
+    Total                      5.875ns (4.573ns logic, 1.302ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 21.60 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 19.56 secs
  
 --> 
 
-Total memory usage is 249536 kilobytes
+Total memory usage is 252544 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   34 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :   35 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
 

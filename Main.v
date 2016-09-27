@@ -13,7 +13,8 @@ module Main(
 	output hsync,
 	output vsync,
 	output reg [7:0]led, 
-	output shouldFinish
+	output shouldFinish,
+	output [3:0]data_sound
     );
 	 
 	 
@@ -163,6 +164,34 @@ module Main(
 	Comparator C4(duckPos_x4, duckPos_y4, bulletPosition_y, bulletPosition_x, collision4);
 	wire collisions = collision || collision2 ||collision3 ||collision4; 
 	
+	reg[4:0] address_sineWave;
+	wire clk_c;
+	wire clk_g;
+	reg temp;
+	assign clk_s = temp;
+	reg [11:0]divider;
+	CLK_Divider #(.counter_limit(12'hbaa))clk(.clk(clk50mhz),.clk1hz(clk_c));
+	CLK_Divider #(.counter_limit(12'h7c9))clk4(.clk(clk50mhz),.clk1hz(clk_g));
+	
+	SineWave rom(address_sineWave,data_sound);
+	always @(posedge clk_s)begin
+		address_sineWave=address_sineWave+1;
+		if(reset)begin
+			address_sineWave=0;
+		end
+	end
+	
+	always @(posedge clk50mhz)begin
+		if(collisions)begin
+			temp = clk_g;
+		end else if(fire_up)begin
+			temp = clk_c;
+		end else begin
+			temp = 0;
+		end
+	end
+	
+	
 	wire draw;
 	wire [5:0]data;
 	Control_Drawer CD(clk50mhz, 
@@ -176,7 +205,7 @@ module Main(
 	reg hasCollisioned;
 	reg fired;
 	always @(posedge vga_clk)
-	begin
+	begin	
 		if(collisions) begin
 			hasCollisioned=1;
 		end

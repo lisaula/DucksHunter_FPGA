@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Sep 26 20:00:27 2016
+// Written by: Map P.20131013 on Mon Sep 26 21:44:25 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -24,6 +24,10 @@ COMP "led<5>" LOCATE = SITE "L14" LEVEL 1;
 COMP "led<6>" LOCATE = SITE "P15" LEVEL 1;
 COMP "led<7>" LOCATE = SITE "R15" LEVEL 1;
 COMP "reload" LOCATE = SITE "P14" LEVEL 1;
+COMP "data_sound<0>" LOCATE = SITE "A10" LEVEL 1;
+COMP "data_sound<1>" LOCATE = SITE "E11" LEVEL 1;
+COMP "data_sound<2>" LOCATE = SITE "E10" LEVEL 1;
+COMP "data_sound<3>" LOCATE = SITE "D10" LEVEL 1;
 COMP "red_out<0>" LOCATE = SITE "P8" LEVEL 1;
 COMP "red_out<1>" LOCATE = SITE "M8" LEVEL 1;
 NET "clk50mhz_IBUFG1" BEL "clk50mhz_IBUFG_BUFG.GCLKMUX" USELOCALCONNECT;
