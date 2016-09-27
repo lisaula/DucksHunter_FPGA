@@ -1,28 +1,35 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Sep 24 13:27:04 2016
+// Written by: Map P.20131013 on Mon Sep 26 21:44:25 2016
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "der" LOCATE = SITE "C12" LEVEL 1;
-COMP "izq" LOCATE = SITE "D12" LEVEL 1;
+COMP "der" LOCATE = SITE "T8" LEVEL 1;
+COMP "izq" LOCATE = SITE "P6" LEVEL 1;
 COMP "blue_out<0>" LOCATE = SITE "L8" LEVEL 1;
 COMP "blue_out<1>" LOCATE = SITE "N9" LEVEL 1;
-COMP "fire" LOCATE = SITE "C10" LEVEL 1;
+COMP "fire" LOCATE = SITE "R11" LEVEL 1;
 COMP "green_out<0>" LOCATE = SITE "P5" LEVEL 1;
 COMP "green_out<1>" LOCATE = SITE "N6" LEVEL 1;
 COMP "hsync" LOCATE = SITE "N8" LEVEL 1;
-COMP "reset" LOCATE = SITE "C13" LEVEL 1;
+COMP "reset" LOCATE = SITE "T13" LEVEL 1;
 COMP "vsync" LOCATE = SITE "M6" LEVEL 1;
+COMP "shouldFinish" LOCATE = SITE "R13" LEVEL 1;
 COMP "clk50mhz" LOCATE = SITE "B8" LEVEL 1;
-COMP "led<0>" LOCATE = SITE "C11" LEVEL 1;
-COMP "led<1>" LOCATE = SITE "D11" LEVEL 1;
-COMP "led<2>" LOCATE = SITE "B11" LEVEL 1;
-COMP "led<3>" LOCATE = SITE "A12" LEVEL 1;
-COMP "led<4>" LOCATE = SITE "A13" LEVEL 1;
-COMP "led<5>" LOCATE = SITE "B13" LEVEL 1;
-COMP "led<6>" LOCATE = SITE "A14" LEVEL 1;
-COMP "led<7>" LOCATE = SITE "B14" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "L15" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "N16" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "P16" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "R16" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "M16" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "L14" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "P15" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "R15" LEVEL 1;
+COMP "reload" LOCATE = SITE "P14" LEVEL 1;
+COMP "data_sound<0>" LOCATE = SITE "A10" LEVEL 1;
+COMP "data_sound<1>" LOCATE = SITE "E11" LEVEL 1;
+COMP "data_sound<2>" LOCATE = SITE "E10" LEVEL 1;
+COMP "data_sound<3>" LOCATE = SITE "D10" LEVEL 1;
 COMP "red_out<0>" LOCATE = SITE "P8" LEVEL 1;
 COMP "red_out<1>" LOCATE = SITE "M8" LEVEL 1;
+NET "clk50mhz_IBUFG1" BEL "clk50mhz_IBUFG_BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 

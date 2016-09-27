@@ -8,15 +8,18 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Main C:|Users|Raim|Documents|Diseno Logico Digital|PatoHunter|Main.v/DD - Ducks_Drawer</ClosedNode>
+         <ClosedNode>/Main C:|Users|Raim|Documents|Diseno Logico Digital|PatoHunter|Main.v/DD2 - Ducks_Drawer</ClosedNode>
+         <ClosedNode>/Main C:|Users|Raim|Documents|Diseno Logico Digital|PatoHunter|Main.v/DD3 - Ducks_Drawer</ClosedNode>
+         <ClosedNode>/Main C:|Users|Raim|Documents|Diseno Logico Digital|PatoHunter|Main.v/DD4 - Ducks_Drawer</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Main (C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Main.v)</SelectedItem>
+         <SelectedItem>BD3 - Bullet_Drawer (C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Bullet_Drawer.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000012a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000012a0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000013d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000013d0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Main (C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Main.v)</CurrentItem>
+      <CurrentItem>BD3 - Bullet_Drawer (C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Bullet_Drawer.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -39,7 +42,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000039b000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000002cf0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000003a3000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000002d70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>VGA_LOGIC.v</CurrentItem>
    </ItemView>
@@ -61,7 +64,6 @@
          <ClosedNode>Configure Target Device</ClosedNode>
          <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
-         <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
@@ -80,27 +82,28 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Edit Constraints (Text)</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Edit Constraints (Text)</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/TB_main C:|Users|Raim|Documents|Diseno Logico Digital|PatoHunter|TB_main.v</ClosedNode>
          <ClosedNode>/TB_main C:|Users|Raim|Documents|Diseno Logico Digital|PatoHunter|TB_main.v/main - Main/DD - Ducks_Drawer</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>main - Main (C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Main.v)</SelectedItem>
+         <SelectedItem>TB_main (C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/TB_main.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000013e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000013e0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000011d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000011d0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>main - Main (C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/Main.v)</CurrentItem>
+      <CurrentItem>TB_main (C:/Users/Raim/Documents/Diseno Logico Digital/PatoHunter/TB_main.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -121,12 +124,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
 </Project>
