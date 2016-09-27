@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: Main.prj
 
@@ -181,8 +181,8 @@ Analyzing hierarchy for module <VGA_LOGIC> in library <work>.
 
 Analyzing hierarchy for module <Ducks_Rom> in library <work>.
 
-WARNING:Xst:2591 - "Main.v" line 25: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "Main.v" line 25: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "Main.v" line 27: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "Main.v" line 27: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -673,16 +673,16 @@ WARNING:Xst:1780 - Signal <shot_data> is never used or assigned. This unconnecte
 WARNING:Xst:646 - Signal <contador_led> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 8-bit up counter for signal <led>.
     Found 3-bit register for signal <bullet_counter>.
-    Found 3-bit subtractor for signal <bullet_counter$addsub0000> created at line 201.
-    Found 3-bit comparator greater for signal <bullet_counter$cmp_gt0000> created at line 200.
+    Found 3-bit subtractor for signal <bullet_counter$addsub0000> created at line 203.
+    Found 3-bit comparator greater for signal <bullet_counter$cmp_gt0000> created at line 202.
     Found 25-bit up counter for signal <contador>.
-    Found 25-bit comparator greatequal for signal <contador$cmp_ge0000> created at line 186.
+    Found 25-bit comparator greatequal for signal <contador$cmp_ge0000> created at line 188.
     Found 1-bit register for signal <fired>.
     Found 1-bit register for signal <hasCollisioned>.
-    Found 25-bit adder for signal <old_contador_2$add0000> created at line 185.
+    Found 25-bit adder for signal <old_contador_2$add0000> created at line 187.
     Found 5-bit up counter for signal <segs>.
-    Found 5-bit comparator greatequal for signal <segs$cmp_ge0000> created at line 187.
-    Found 25-bit comparator less for signal <segs$cmp_lt0000> created at line 186.
+    Found 5-bit comparator greatequal for signal <segs$cmp_ge0000> created at line 189.
+    Found 25-bit comparator less for signal <segs$cmp_lt0000> created at line 188.
     Summary:
 	inferred   3 Counter(s).
 	inferred   5 D-type flip-flop(s).
@@ -935,17 +935,17 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 22
+# IOs                              : 23
 
 Cell Usage :
-# BELS                             : 7660
+# BELS                             : 7661
 #      GND                         : 1
 #      INV                         : 291
 #      LUT1                        : 646
 #      LUT2                        : 945
 #      LUT2_D                      : 2
 #      LUT2_L                      : 5
-#      LUT3                        : 885
+#      LUT3                        : 886
 #      LUT3_D                      : 41
 #      LUT3_L                      : 3
 #      LUT4                        : 1171
@@ -969,10 +969,10 @@ Cell Usage :
 #      FDSE                        : 12
 # Clock Buffers                    : 3
 #      BUFG                        : 3
-# IO Buffers                       : 22
+# IO Buffers                       : 23
 #      IBUF                        : 5
 #      IBUFG                       : 1
-#      OBUF                        : 16
+#      OBUF                        : 17
 # DCMs                             : 1
 #      DCM_SP                      : 1
 =========================================================================
@@ -984,9 +984,9 @@ Selected Device : 3s500eft256-5
 
  Number of Slices:                     2158  out of   4656    46%  
  Number of Slice Flip Flops:            644  out of   9312     6%  
- Number of 4 input LUTs:               4010  out of   9312    43%  
- Number of IOs:                          22
- Number of bonded IOBs:                  22  out of    190    11%  
+ Number of 4 input LUTs:               4011  out of   9312    43%  
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    190    12%  
  Number of GCLKs:                         3  out of     24    12%  
  Number of DCMs:                          1  out of      4    25%  
 
@@ -1029,7 +1029,7 @@ Speed Grade: -5
 
    Minimum period: 16.866ns (Maximum Frequency: 59.292MHz)
    Minimum input arrival time before clock: 7.790ns
-   Maximum output required time after clock: 4.063ns
+   Maximum output required time after clock: 6.364ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -1175,32 +1175,34 @@ Offset:              7.790ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50mhz'
-  Total number of paths / destination ports: 16 / 16
+  Total number of paths / destination ports: 21 / 17
 -------------------------------------------------------------------------
-Offset:              4.063ns (Levels of Logic = 1)
-  Source:            led_7 (FF)
-  Destination:       led<7> (PAD)
+Offset:              6.364ns (Levels of Logic = 3)
+  Source:            segs_3 (FF)
+  Destination:       shouldFinish (PAD)
   Source Clock:      clk50mhz rising 0.5X
 
-  Data Path: led_7 to led<7>
+  Data Path: segs_3 to shouldFinish
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.514   0.380  led_7 (led_7)
-     OBUF:I->O                 3.169          led_7_OBUF (led<7>)
+     FDRE:C->Q             2   0.514   0.532  segs_3 (segs_3)
+     LUT3:I0->O            4   0.612   0.568  Result<4>211 (Result<4>2_bdd0)
+     LUT3:I1->O            1   0.612   0.357  shouldFinish1 (shouldFinish_OBUF)
+     OBUF:I->O                 3.169          shouldFinish_OBUF (shouldFinish)
     ----------------------------------------
-    Total                      4.063ns (3.683ns logic, 0.380ns route)
-                                       (90.6% logic, 9.4% route)
+    Total                      6.364ns (4.907ns logic, 1.457ns route)
+                                       (77.1% logic, 22.9% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 22.68 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 21.60 secs
  
 --> 
 
-Total memory usage is 250240 kilobytes
+Total memory usage is 249536 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   34 (   0 filtered)

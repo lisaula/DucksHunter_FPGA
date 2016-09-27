@@ -44,14 +44,14 @@ Setup/Hold to clock clk50mhz
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-der         |   -1.040(R)|    4.202(R)|logicClk          |   0.000|
-fire        |    2.312(R)|    3.819(R)|logicClk          |   0.000|
-            |    2.362(R)|    0.713(R)|vga_clk           |   0.000|
-izq         |   -0.853(R)|    4.801(R)|logicClk          |   0.000|
-reload      |    2.774(R)|   -0.163(R)|vga_clk           |   0.000|
-reset       |    2.336(R)|   -0.792(R)|clk50mhz_IBUFG    |   0.000|
-            |    1.674(R)|    4.400(R)|logicClk          |   0.000|
-            |    4.218(R)|    0.450(R)|vga_clk           |   0.000|
+der         |   -1.670(R)|    5.166(R)|logicClk          |   0.000|
+fire        |    2.735(R)|    4.309(R)|logicClk          |   0.000|
+            |    1.370(R)|    1.763(R)|vga_clk           |   0.000|
+izq         |   -1.841(R)|    5.783(R)|logicClk          |   0.000|
+reload      |    1.636(R)|    0.805(R)|vga_clk           |   0.000|
+reset       |    2.351(R)|   -0.832(R)|clk50mhz_IBUFG    |   0.000|
+            |    0.879(R)|    5.605(R)|logicClk          |   0.000|
+            |    4.063(R)|    1.143(R)|vga_clk           |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk50mhz to Pad
@@ -59,22 +59,23 @@ Clock clk50mhz to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-blue_out<0> |    8.849(R)|vga_clk           |   0.000|
-blue_out<1> |    9.130(R)|vga_clk           |   0.000|
-green_out<0>|    9.315(R)|vga_clk           |   0.000|
-green_out<1>|    9.376(R)|vga_clk           |   0.000|
-hsync       |    8.274(R)|vga_clk           |   0.000|
-led<0>      |    8.319(R)|vga_clk           |   0.000|
-led<1>      |    8.327(R)|vga_clk           |   0.000|
-led<2>      |    8.235(R)|vga_clk           |   0.000|
-led<3>      |    8.635(R)|vga_clk           |   0.000|
-led<4>      |    8.090(R)|vga_clk           |   0.000|
-led<5>      |    8.578(R)|vga_clk           |   0.000|
-led<6>      |    8.903(R)|vga_clk           |   0.000|
-led<7>      |    8.593(R)|vga_clk           |   0.000|
-red_out<0>  |    8.492(R)|vga_clk           |   0.000|
-red_out<1>  |    8.539(R)|vga_clk           |   0.000|
-vsync       |    8.525(R)|vga_clk           |   0.000|
+blue_out<0> |    8.230(R)|vga_clk           |   0.000|
+blue_out<1> |    8.301(R)|vga_clk           |   0.000|
+green_out<0>|    9.004(R)|vga_clk           |   0.000|
+green_out<1>|    8.989(R)|vga_clk           |   0.000|
+hsync       |    7.831(R)|vga_clk           |   0.000|
+led<0>      |    8.065(R)|vga_clk           |   0.000|
+led<1>      |    7.837(R)|vga_clk           |   0.000|
+led<2>      |    7.273(R)|vga_clk           |   0.000|
+led<3>      |    8.001(R)|vga_clk           |   0.000|
+led<4>      |    7.752(R)|vga_clk           |   0.000|
+led<5>      |    7.857(R)|vga_clk           |   0.000|
+led<6>      |    7.750(R)|vga_clk           |   0.000|
+led<7>      |    7.822(R)|vga_clk           |   0.000|
+red_out<0>  |    8.254(R)|vga_clk           |   0.000|
+red_out<1>  |    8.205(R)|vga_clk           |   0.000|
+shouldFinish|   11.233(R)|vga_clk           |   0.000|
+vsync       |    7.936(R)|vga_clk           |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk50mhz
@@ -82,11 +83,11 @@ Clock to Setup on destination clock clk50mhz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk50mhz       |   20.101|         |         |         |
+clk50mhz       |   21.775|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun Sep 25 13:24:00 2016 
+Analysis completed Mon Sep 26 20:01:00 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

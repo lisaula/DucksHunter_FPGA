@@ -12,8 +12,10 @@ module Main(
    output [1:0]blue_out,
 	output hsync,
 	output vsync,
-	output reg [7:0]led
+	output reg [7:0]led, 
+	output shouldFinish
     );
+	 
 	 
    wire vga_clk;//= clk50mhz;
 	wire [9:0]hcount;
@@ -26,7 +28,7 @@ module Main(
 	
 	reg [24:0]contador;
 	reg [4:0]segs;
-	wire shouldFinish = segs == 30? 1:0;
+	assign shouldFinish = segs == 30? 1:0;
 	wire logicClk = shouldFinish? 0: vga_clk;
 	//Ducks_Rom rom(address,data);
 	
